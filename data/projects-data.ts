@@ -12,8 +12,7 @@ export const projectsData = [
   {
     id: 1,
     title: "HealtCare",
-    description:
-      "Uma plataforma de saúde que agiliza o registro de pacientes, agendamento de consultas e registros médicos com implementacao de formulários complexos e notificações por SMS",
+    description: "Plataforma de saúde para registro de pacientes e consultas.",
     image: healtcareImage,
     link: "https://github.com/PhelipeG/Plataforma-HealtCare",
     category: "Web",
@@ -32,8 +31,7 @@ export const projectsData = [
   {
     id: 2,
     title: "Planner Io",
-    description:
-      "Desenvolvida com React e estilizada com Tailwind CSS, esta aplicação permite aos usuários cadastrar viagens, planejar todos os detalhes e convidar amigos para participar. Com uma interface moderna e responsiva, os usuários podem gerenciar itinerários, reservas e listas de tarefas, tornando o planejamento de viagens uma experiência colaborativa e divertida.",
+    description: "App para planejar viagens e convidar amigos.",
     image: plannerIoImage,
     link: "https://github.com/GuilhaoF/planner.io",
     category: "Web",
@@ -49,8 +47,7 @@ export const projectsData = [
   {
     id: 3,
     title: "Gdelivery",
-    description:
-      "Aplicacao react native de delivery com gestao de estado e envio dos pedidos ao whatsapp da loja Para simplificar, estamos criando um aplicativo de cardápio que proporciona aos clientes a conveniência de selecionar os pratos desejados. Ao finalizar o pedido no aplicativo, a solicitação é automaticamente encaminhada para o WhatsApp do restaurante.",
+    description: "App de delivery com pedidos via WhatsApp.",
     image: gdeliveryImage,
     link: "",
     category: "Mobile",
@@ -67,7 +64,7 @@ export const projectsData = [
   {
     id: 4,
     title: "MyContacts",
-    description: "Gereciador de contatos",
+    description: "Gerenciador de contatos.",
     image: mycontactsImage,
     link: "https://github.com/PhelipeG/mycontacts-frontend",
     category: "Web",
@@ -81,7 +78,7 @@ export const projectsData = [
   {
     id: 5,
     title: "Web Carros",
-    description: "Sistema de gerenciamento de carros",
+    description: "Sistema de gerenciamento de carros.",
     image: webcarrosImage,
     link: "https://github.com/PhelipeG/web-rtx-cars",
     category: "Web",
@@ -98,7 +95,7 @@ export const projectsData = [
   {
     id: 6,
     title: "Pass In",
-    description: "Aplicaçao Mobile para gerenciamento de inscrições em eventos",
+    description: "App para gerenciamento de inscrições em eventos.",
     image: passInImage,
     link: "https://github.com/GuilhaoF/pass-in-app",
     category: "Mobile",
@@ -116,7 +113,7 @@ export const projectsData = [
   {
     id: 7,
     title: "My Goals",
-    description: "Aplicaçao Mobile para gerenciamento de metas financeiras",
+    description: "App para gerenciamento de metas financeiras.",
     image: mygoalsImage,
     link: "",
     category: "Mobile",
@@ -134,8 +131,7 @@ export const projectsData = [
   {
     id: 8,
     title: "Iweather",
-    description:
-      "Aplicaçao Mobile de previsao do tempo usando api do openweather",
+    description: "App de previsão do tempo usando API do OpenWeather.",
     image: iweatherImage,
     link: "",
     category: "Mobile",
@@ -154,7 +150,7 @@ export const projectsData = [
   {
     id: 9,
     title: "Pizza Shop",
-    description: "",
+    description: "App web para pedidos de pizza.",
     image: pizzaShopImage,
     link: "https://github.com/PhelipeG/Pizza-Shop-Web?tab=readme-ov-file",
     category: "Web",

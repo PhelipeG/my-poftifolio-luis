@@ -25,16 +25,14 @@ export default function Work() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg"
+              className="bg-gray-800 p-6 rounded-lg shadow-lg w-[420px] h-[600px]"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className=" object-cover rounded-lg mb-4"
+                className="w-full h-64 rounded-lg"
               />
-              <h2 className="text-2xl font-bold text-white mb-2">
-                {project.title}
-              </h2>
+              <h2 className="text-2xl font-bold text-white">{project.title}</h2>
               <p className="text-white/60 mb-4">{project.description}</p>
               <ul className="flex flex-wrap gap-2 mb-4">
                 {project.stack &&
