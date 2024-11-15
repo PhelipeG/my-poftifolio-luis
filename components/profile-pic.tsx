@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profile from "../app/public/images/hero-1.png";
+import profile from "../public/images/hero-1.png";
 
 export function ProfilePic() {
   return (
@@ -21,7 +21,7 @@ export function ProfilePic() {
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
         >
-           <Image
+          <Image
             src={profile}
             priority
             quality={100}
