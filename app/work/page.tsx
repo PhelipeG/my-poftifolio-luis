@@ -25,7 +25,7 @@ export default function Work() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg w-[420px] h-[600px]"
+              className="bg-[#27272c] p-6 rounded-lg shadow-lg w-[420px] h-[600px]"
             >
               <img
                 src={project.image}
@@ -39,7 +39,7 @@ export default function Work() {
                   project.stack.map((item, index) => (
                     <li
                       key={index}
-                      className="text-sm text-accent bg-gray-700 px-2 py-1 rounded"
+                      className="text-sm text-green-500 bg-[#27272c] px-2 py-1 rounded"
                     >
                       {item.name}
                     </li>
