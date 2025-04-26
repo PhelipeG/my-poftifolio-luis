@@ -14,13 +14,13 @@ const linksMenu = [
   },
   {
     name: 'Sobre Mim',
-    path: '/about',
+    path: '/resume',
     icon: <FaUser/>
     
   },
   {
     name: 'Projetos',
-    path: '/projects',
+    path: '/work',
     icon: <FaAtlas/>
   },
   {
