@@ -24,13 +24,14 @@ export function ProfilePic() {
           <Image
             src={profile}
             priority
-            quality={100}
+            quality={85}
+            sizes="(max-width: 768px) 298px, 498px"
             fill
-            alt="imagem de usuario"
+            alt="Foto de perfil de Luis Felipe Guilhao"
             className="object-contain rounded-full"
           />
 
-          {/* Código do Círculo */}
+          {/* Círculo animado restaurado */}
           <motion.svg
             className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
             fill="transparent"

@@ -190,6 +190,12 @@ export default function Work() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index < 3} // Prioriza o carregamento das 3 primeiras imagens
+                  loading={index < 3 ? "eager" : "lazy"}
+                  quality={75} // Boa qualidade mas otimizada para performance
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ7W5RN0wAAAABJRU5ErkJggg=="
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
