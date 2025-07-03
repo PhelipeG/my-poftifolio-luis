@@ -7,6 +7,13 @@ const passInImage = "/images-projects/pass-in.png";
 const mygoalsImage = "/images-projects/mygoals.png";
 const iweatherImage = "/images-projects/iweather.png";
 const pizzaShopImage = "/images-projects/pizzashop-web.png";
+const safeStockImage = "/images-projects/safe-stock.png";
+const coffeDeliveryWebImage = "/images-projects/coffe-web-delivery.png";
+const cookAppImage = "/images-projects/cook-app-mobile.png";
+const teamsMobileImage = "/images-projects/teams-mobile.png";
+const sodaProductsImage = "/images-projects/lading-page-sodas.png";
+const alimetaSaasImage = "/images-projects/alimeta-saas.png";
+const fleetImage = "/images-projects/fleet-app.png";
 
 export const projectsData = [
   {
@@ -168,4 +175,135 @@ export const projectsData = [
       { name: "Zod" },
     ],
   },
+  {
+    id: 10,
+    title: "SafeStock",
+    description:
+      "Projeto de sistema de estoque com autenticação e gerenciamento de produtos usando Socket.IO, Notificações de estoque baixo e muito mais.",
+    image: safeStockImage,
+    link: "https://github.com/PhelipeG/safestock-vuejs-app",
+    category: "Web",
+    stack: [
+      { name: "Vue.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind" },
+      { name: "Pinia" },
+      { name: "React Query" },
+      { name: "Shadcn Ui" },
+      { name: "Socket.IO" },
+      { name: "Axios" },
+      { name: "Vue Router" },
+    ],
+  },
+  {
+    id: 11,
+    title: "Coffee Delivery Web",
+    description:
+      "O projeto é um ecommerce on-line de cafés com a opção de delivery, onde o usuário adiciona ao carrinho de compras um ou mais dos produtos disponíveis e solicita a compra preenchendo o formulário com o endereço de entrega",
+    image: coffeDeliveryWebImage,
+    link: "https://github.com/PhelipeG/coffee-app-web",
+    category: "Web",
+    stack: [
+      { name: "React.js" },
+      { name: "React-Hook-Form" },
+      { name: "TypeScript" },
+      { name: "Zod" },
+      { name: "Zustand" },
+      { name: "React Router v6" },
+      { name: "Styled Components" },
+      { name: "Axios" },
+      { name: "Phosphor Icons" },
+    ],
+  },
+  {
+    id: 12,
+    title: "Cook Mobile App",
+    description:
+      "O projeto é um aplicativo mobile de receitas, uma aplicação que sugere receitas conforme os ingredientes selecionados usando React Native.",
+    image: cookAppImage,
+    link: "https://github.com/PhelipeG/cookapp-reactnative",
+    category: "Mobile",
+    stack: [
+      { name: "React Native" },
+      { name: "TypeScript" },
+      { name: "Supabase" },
+      { name: "Axios" },
+      { name: "React Native Reanimated" },
+      { name: "Expo Router" },
+      { name: "Expo Linking" },
+      { name: "Expo" },
+    ],
+  },
+  {
+    id: 13,
+    title: "Teams App",
+    description: "Um app para reunir e separar pessoas em equipes para jogos e colocar a pontuacao para cada equipe e em breve mais funcionalidades",
+    image: teamsMobileImage,
+    link: "https://github.com/PhelipeG/teams-app-reactnative",
+    category: "Mobile",
+    stack: [
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Expo" },
+      { name: "React Native" },
+      { name: "Styled Components" },
+      { name: "Async Storage" },
+    ],
+  },
+  {
+    id: 14,
+    title: "Landing Page - Products Soda",
+    description: "Landing page para a promoção de produtos de soda.",
+    image: sodaProductsImage,
+    link: "https://landing-page-product-sodas.vercel.app",
+    category: "Web",
+    stack: [
+      { name: "Vite" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Framer Motion" },
+    ]
+  },
+  {
+    id: 15,
+    title: "Alimeta - MicroSaas de Nutrição",
+    description: "Alimeta é um microSaaS de nutrição que permite aos usuários registrar suas refeições, acompanhar a ingestão de nutrientes e receber recomendações personalizadas.",
+    image: alimetaSaasImage,
+    link: "https://alimeta-saas.vercel.app",
+    category: "Web",
+    stack: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Shadcn UI" },
+      { name: "Prisma" },
+      { name: "PostgreSQL" },
+      { name: "Bette - Auth" },
+      { name: "Zod" },
+      { name: "React Hook Form" },
+      { name: "Sentry" },
+      { name: "Stripe" },
+    ]
+  },
+  {
+    id: 16,
+    title: "Fleet - App de Gerenciamento de Frotas",
+    description: "Um aplicativo para gerenciar frotas de veículos, permitindo rastreamento, manutenção e relatórios.",
+    image: fleetImage,
+    link: "https://github.com/PhelipeG/fleet-app",
+    category: "Mobile",
+    stack: [
+      { name: "React Native" },
+      { name: "TypeScript" },
+      { name: "Expo" },
+      { name: "Styled Components" },
+      { name: "Async Storage" },
+      { name: "React Navigation" },
+      { name: "Realm" },
+      { name: "NetInfo" },
+      { name: "Expo Location" },
+    ]
+  }
 ];

@@ -149,7 +149,7 @@ export default function Work() {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -162,9 +162,9 @@ export default function Work() {
                 animationDelay: `${(project.id % 6) * 100}ms`
               }}
             >
-              <div className="bg-white/5 border-white/10 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 group overflow-hidden w-full h-full min-h-[600px] flex flex-col rounded-2xl border">
+              <div className="bg-white/5 border-white/10 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 group overflow-hidden w-full h-full min-h-[700px] flex flex-col rounded-2xl border">
                 {/* Imagem */}
-                <div className="relative h-56 lg:h-64 overflow-hidden flex-shrink-0">
+                <div className="relative h-64 lg:h-72 overflow-hidden flex-shrink-0">
                   {/* Overlay de categoria */}
                   <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/90 font-medium border border-white/20 shadow-lg">
                     <div className="flex items-center gap-1.5">
@@ -200,45 +200,30 @@ export default function Work() {
                   </div>
                 </div>
 
-                <div className="flex flex-col flex-grow p-6">
+                <div className="flex flex-col flex-grow p-6 lg:p-8">
                   <div className="flex-grow">
-                    <h2 className="text-xl lg:text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
+                    <h2 className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
                       {project.title}
                     </h2>
                     
-                    <p className="text-white/70 text-base lg:text-lg mb-5 line-clamp-3">
+                    <p className="text-white/70 text-base lg:text-lg mb-6 leading-relaxed">
                       {project.description}
                     </p>
                     
                     {/* Tech stack */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.stack &&
-                        project.stack.map((item, idx) => {
-                          if (idx < 5 || hoverIndex === index) {
-                            return (
-                              <motion.span
-                                key={idx}
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{ delay: 0.1 * idx, duration: 0.3 }}
-                                className="text-xs lg:text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 text-green-400 font-medium backdrop-blur-sm shadow-sm"
-                              >
-                                {item.name}
-                              </motion.span>
-                            );
-                          }
-                          return null;
-                        })}
-                      
-                      {project.stack && project.stack.length > 5 && hoverIndex !== index && (
-                        <motion.span
-                          initial={{ scale: 0.8, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          className="text-xs lg:text-sm px-3 py-1 rounded-full bg-green-400/20 text-green-400 font-medium"
-                        >
-                          +{project.stack.length - 5}
-                        </motion.span>
-                      )}
+                        project.stack.map((item, idx) => (
+                          <motion.span
+                            key={idx}
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.1 * idx, duration: 0.3 }}
+                            className="text-xs lg:text-sm px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-green-400 font-medium backdrop-blur-sm shadow-sm hover:bg-green-400/10 hover:border-green-400/30 transition-all duration-300"
+                          >
+                            {item.name}
+                          </motion.span>
+                        ))}
                     </div>
                   </div>
                   
