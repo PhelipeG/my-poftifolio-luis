@@ -12,7 +12,7 @@ import { experience } from "@/data/experience-data";
 
 export default function Timeline() {
   return (
-    <div className="container mx-auto p-4">
+    <div className="max-w-[1600px] mx-auto px-6 lg:px-8 p-4">
       <div className="relative">
         {/* Vertical line */}
         <motion.div
@@ -35,11 +35,11 @@ export default function Timeline() {
               index % 2 === 0 ? "flex-row-reverse" : ""
             }`}
           >
-            <div className="w-5/12"></div>
+            <div className="w-2/12 lg:w-1/12"></div>
             <div className="z-20">
               <div className="w-4 h-4 bg-primary rounded-full"></div>
             </div>
-            <Card className="w-5/12 bg-slate-100 text-green-500">
+            <Card className="w-8/12 lg:w-9/12 bg-slate-100 text-green-500">
               <CardHeader>
                 <CardTitle className=" text-sm">{item.title}</CardTitle>
                 <span className="font-bold text-primary">

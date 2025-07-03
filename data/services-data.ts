@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { RiCodeBoxLine, RiLayoutGridLine, RiMobileDownloadLine } from "react-icons/ri";
+import { RiCodeBoxLine, RiLayoutGridLine, RiMobileDownloadLine, RiServerLine } from "react-icons/ri";
 import { AiOutlineRocket } from "react-icons/ai";
 
 interface ServiceItem {
@@ -23,6 +23,11 @@ export const services: ServiceData[] = [{
       icon: RiCodeBoxLine,
       title: "Desenvolvimento Frontend",
       description: "Criação de interfaces modernas e responsivas com React, Next.js e TypeScript."
+    },
+    {
+      icon: RiServerLine,
+      title: "Desenvolvimento Fullstack",
+      description: "Soluções completas end-to-end com frontend, backend e banco de dados integrados."
     },
     {
       icon: RiMobileDownloadLine,

@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="absolute -top-40 -left-40 w-96 h-96 bg-green-400/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
             
-            <div className="container mx-auto relative z-10">
+            <div className="max-w-[1600px] mx-auto px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}

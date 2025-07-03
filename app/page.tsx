@@ -13,7 +13,7 @@ const ContactButton = dynamic(() => import("@/components/ui/contact-button"), { 
 export default function Home() {
   return (
     <div className="h-full min-h-screen py-12">
-      <div className="container mx-auto">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <ClientWrapper>
           <div className="flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-20 xl:pt-8 xl:pb-20">
@@ -92,7 +92,7 @@ export default function Home() {
       </div>
       
       {/* Call to Action */}
-      <div className="container mx-auto mt-20 text-center">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8 mt-20 text-center">
         <div className="bg-gradient-to-r from-green-400/20 to-purple-500/20 backdrop-blur-md rounded-3xl py-16 px-8 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos trabalhar juntos?</h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">Estou disponível para projetos freelance, colaborações e oportunidades de trabalho remoto.</p>

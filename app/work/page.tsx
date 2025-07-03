@@ -14,6 +14,7 @@ import { BsGithub,  BsCodeSlash } from "react-icons/bs";
 import { MdDevices, MdOutlineCategory } from "react-icons/md";
 import { useRef, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
+import ProjectFilter from "@/components/project-filter";
 
 export default function Work() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -55,7 +56,6 @@ export default function Work() {
   };
 
   // Filtros de projetos
-  const categories = ["Todos", "Web", "Mobile"];
   const [activeFilter, setActiveFilter] = useState("Todos");
 
   const filteredProjects = activeFilter === "Todos" 
@@ -98,7 +98,7 @@ export default function Work() {
         <MdDevices className="text-6xl text-purple-400" />
       </motion.div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -134,33 +134,22 @@ export default function Work() {
             Explore meus projetos de desenvolvimento web e mobile. 
             Cada projeto representa meu compromisso com código limpo, interfaces modernas e funcionalidades inovadoras.
           </motion.p>
-          
-          {/* Filtros de Categoria */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-4 mt-8 mb-12"
-          >
-            {categories.map((category, index) => (
-              <motion.button
-                key={category}
-                onClick={() => setActiveFilter(category)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-md
-                  ${activeFilter === category 
-                    ? "bg-gradient-to-r from-green-500 to-green-400 text-black shadow-[0_4px_15px_rgba(74,222,128,0.3)]" 
-                    : "bg-white/5 backdrop-blur-sm text-white/80 hover:bg-white/10 border border-white/10"
-                  }`}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </motion.div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+        {/* Filtro de Categoria */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mb-8"
+        >
+          <ProjectFilter 
+            selectedCategory={activeFilter}
+            onCategoryChange={setActiveFilter}
+          />
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 lg:gap-10">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -168,120 +157,117 @@ export default function Work() {
               initial="hidden"
               animate="visible"
               variants={cardVariants}
-              whileHover={{ 
-                y: -12, 
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.25)",
-                transition: { duration: 0.3 } 
+              className="w-full animate-fade-in"
+              style={{
+                animationDelay: `${(project.id % 6) * 100}ms`
               }}
-              onHoverStart={() => setHoverIndex(index)}
-              onHoverEnd={() => setHoverIndex(null)}
-              className="max-w-[380px] w-full rounded-2xl overflow-hidden backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:border-green-400/30 transition-all duration-300"
             >
-              <div className="relative w-full h-[220px] overflow-hidden group">
-                {/* Overlay de categoria */}
-                <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/90 font-medium border border-white/20 shadow-lg">
-                  <div className="flex items-center gap-1.5">
-                    <MdOutlineCategory className="text-green-400" />
-                    {project.category}
+              <div className="bg-white/5 border-white/10 hover:border-green-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 group overflow-hidden w-full h-full min-h-[600px] flex flex-col rounded-2xl border">
+                {/* Imagem */}
+                <div className="relative h-56 lg:h-64 overflow-hidden flex-shrink-0">
+                  {/* Overlay de categoria */}
+                  <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/90 font-medium border border-white/20 shadow-lg">
+                    <div className="flex items-center gap-1.5">
+                      <MdOutlineCategory className="text-green-400" />
+                      {project.category}
+                    </div>
+                  </div>
+                  
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
+                    loading={index < 3 ? "eager" : "lazy"}
+                    quality={75}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ7W5RN0wAAAABJRU5ErkJggg=="
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  
+                  {/* Overlay escuro com botão */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                    <Link href={project.link} target="_blank" className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-gradient-to-r from-green-500 to-green-400 text-black font-medium px-5 py-2.5 rounded-full flex items-center gap-2 shadow-[0_4px_15px_rgba(74,222,128,0.3)]"
+                      >
+                        Ver projeto <FiExternalLink />
+                      </motion.div>
+                    </Link>
                   </div>
                 </div>
-                
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={index < 3} // Prioriza o carregamento das 3 primeiras imagens
-                  loading={index < 3 ? "eager" : "lazy"}
-                  quality={75} // Boa qualidade mas otimizada para performance
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ7W5RN0wAAAABJRU5ErkJggg=="
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                {/* Overlay escuro com botão */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                  <Link href={project.link} target="_blank" className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-green-500 to-green-400 text-black font-medium px-5 py-2.5 rounded-full flex items-center gap-2 shadow-[0_4px_15px_rgba(74,222,128,0.3)]"
-                    >
-                      Ver projeto <FiExternalLink />
-                    </motion.div>
-                  </Link>
-                </div>
-              </div>
 
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-white mb-2 line-clamp-1 group-hover:text-green-400 transition-colors duration-300">
-                  {project.title}
-                </h2>
-                
-                <p className="text-white/70 text-sm mb-5 line-clamp-3 h-[60px] leading-relaxed">
-                  {project.description}
-                </p>
-                
-                {/* Tech stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.stack &&
-                    project.stack.map((item, idx) => {
-                      // Limita a 5 tecnologias visíveis por padrão
-                      if (idx < 5 || hoverIndex === index) {
-                        return (
-                          <motion.span
-                            key={idx}
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ delay: 0.1 * idx, duration: 0.3 }}
-                            className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-green-400 font-medium backdrop-blur-sm shadow-sm"
-                          >
-                            {item.name}
-                          </motion.span>
-                        );
-                      }
-                      return null;
-                    })}
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="flex-grow">
+                    <h2 className="text-xl lg:text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
+                      {project.title}
+                    </h2>
+                    
+                    <p className="text-white/70 text-base lg:text-lg mb-5 line-clamp-3">
+                      {project.description}
+                    </p>
+                    
+                    {/* Tech stack */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.stack &&
+                        project.stack.map((item, idx) => {
+                          if (idx < 5 || hoverIndex === index) {
+                            return (
+                              <motion.span
+                                key={idx}
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ delay: 0.1 * idx, duration: 0.3 }}
+                                className="text-xs lg:text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 text-green-400 font-medium backdrop-blur-sm shadow-sm"
+                              >
+                                {item.name}
+                              </motion.span>
+                            );
+                          }
+                          return null;
+                        })}
+                      
+                      {project.stack && project.stack.length > 5 && hoverIndex !== index && (
+                        <motion.span
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          className="text-xs lg:text-sm px-3 py-1 rounded-full bg-green-400/20 text-green-400 font-medium"
+                        >
+                          +{project.stack.length - 5}
+                        </motion.span>
+                      )}
+                    </div>
+                  </div>
                   
-                  {/* Contador para tecnologias extras não exibidas */}
-                  {project.stack && project.stack.length > 5 && hoverIndex !== index && (
-                    <motion.span
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      className="text-xs px-3 py-1 rounded-full bg-green-400/20 text-green-400 font-medium"
+                  {/* Footer do card */}
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                    <Link href={project.link} target="_blank" aria-label={`Ver repositório de ${project.title}`}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[45px] h-[45px] rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex justify-center items-center group transition-all duration-300 hover:bg-green-400/20 hover:border-green-400/30 shadow-md">
+                            <BsGithub className="text-white text-lg group-hover:text-green-400 transition-colors duration-300" />
+                          </TooltipTrigger>
+                          <TooltipContent className="bg-white/10 backdrop-blur-md border-white/20 shadow-xl">
+                            <p>Repositório no Github</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                    
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-inner"
                     >
-                      +{project.stack.length - 5}
-                    </motion.span>
-                  )}
-                </div>
-                
-                {/* Footer do card */}
-                <div className="flex items-center justify-between pt-2 border-t border-white/10">
-                  {/* Botão do GitHub */}
-                  <Link href={project.link} target="_blank" aria-label={`Ver repositório de ${project.title}`}>
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[45px] h-[45px] rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex justify-center items-center group transition-all duration-300 hover:bg-green-400/20 hover:border-green-400/30 shadow-md">
-                          <BsGithub className="text-white text-lg group-hover:text-green-400 transition-colors duration-300" />
-                        </TooltipTrigger>
-                        <TooltipContent className="bg-white/10 backdrop-blur-md border-white/20 shadow-xl">
-                          <p>Repositório no Github</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </Link>
-                  
-                  {/* Indicador de tipo/ano */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                    className="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-inner"
-                  >
-                    <span className="text-xs text-white/70 font-medium">
-                      {project.category === "Web" ? "Web App" : "Mobile App"}
-                    </span>
-                  </motion.div>
+                      <span className="text-xs lg:text-sm text-white/70 font-medium">
+                        {project.category === "Web" ? "Web App" : "Mobile App"}
+                      </span>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>

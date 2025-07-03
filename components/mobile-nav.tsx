@@ -24,6 +24,11 @@ const linksMenu = [
     icon: <FaAtlas/>
   },
   {
+    name: 'Testes Técnicos',
+    path: '/tests-technical',
+    icon: <FaAtlas/>
+  },
+  {
     name: 'Contato',
     path: '/contact',
     icon: <FaInfo/>

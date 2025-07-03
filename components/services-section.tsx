@@ -10,11 +10,11 @@ export default function ServicesSection() {
         <p className="text-white/60 mt-6 max-w-2xl mx-auto">{services[0].description}</p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
         {services[0].serviceList.map((service, index) => (
           <div 
             key={index}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:border-green-400/30 transition-all duration-300 h-full flex flex-col"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:border-green-400/30 transition-all duration-300 h-full flex flex-col hover:scale-105"
           >
             <div className="bg-white/5 rounded-xl w-16 h-16 flex items-center justify-center mb-5">
               <service.icon className="text-3xl text-green-400" />

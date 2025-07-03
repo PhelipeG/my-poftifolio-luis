@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { HiDownload } from "react-icons/hi";
 import { FaCode, FaUserGraduate, FaUserTie } from "react-icons/fa";
-import { BiCodeAlt, BiLaptop, BiMobile } from "react-icons/bi";
+import { BiCodeAlt, BiLaptop, BiMobile, BiServer } from "react-icons/bi";
 
 // Variantes de animação para elementos comuns
 const fadeInUp = {
@@ -33,8 +33,8 @@ const floatingIcons = {
       duration: 3,
       repeat: Infinity,
       ease: "easeInOut",
-    }
-  }
+    },
+  },
 };
 
 export default function Resume() {
@@ -43,7 +43,9 @@ export default function Resume() {
   // Animação para a borda do card
   const borderVariants = {
     animate: {
-      background: ["linear-gradient(90deg, rgba(74,222,128,0) 0%, rgba(74,222,128,1) 50%, rgba(74,222,128,0) 100%)"],
+      background: [
+        "linear-gradient(90deg, rgba(74,222,128,0) 0%, rgba(74,222,128,1) 50%, rgba(74,222,128,0) 100%)",
+      ],
       backgroundSize: "200% 100%",
       backgroundPosition: ["100% 0%", "0% 0%", "100% 0%"],
       transition: {
@@ -73,7 +75,7 @@ export default function Resume() {
       >
         <BiCodeAlt className="text-5xl text-green-400/30" />
       </motion.div>
-      
+
       <motion.div
         variants={floatingIcons}
         initial="initial"
@@ -83,7 +85,7 @@ export default function Resume() {
       >
         <BiLaptop className="text-4xl text-green-400/20" />
       </motion.div>
-      
+
       <motion.div
         variants={floatingIcons}
         initial="initial"
@@ -94,8 +96,8 @@ export default function Resume() {
         <BiMobile className="text-3xl text-green-400/25" />
       </motion.div>
 
-      <div className="container mx-auto relative z-10 px-2 sm:px-4">
-        <motion.div 
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8 relative z-10">
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -107,9 +109,10 @@ export default function Resume() {
             </span>
           </h1>
           <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg px-2 md:px-0">
-            Minha trajetória profissional, formação acadêmica e habilidades técnicas que me definem como desenvolvedor.
+            Minha trajetória profissional, formação acadêmica e habilidades
+            técnicas que me definem como desenvolvedor.
           </p>
-          
+
           <motion.button
             onClick={() => {
               const link = document.createElement("a");
@@ -127,7 +130,7 @@ export default function Resume() {
             <span>Download CV Completo</span>
           </motion.button>
         </motion.div>
-        
+
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-6 md:gap-10"
@@ -139,31 +142,37 @@ export default function Resume() {
             className="w-full xl:w-auto xl:sticky xl:top-24 h-max"
           >
             <TabsList className="flex flex-col md:flex-row xl:flex-col w-full max-w-none xl:max-w-[380px] mx-auto xl:mx-0 gap-3 md:gap-4 xl:gap-6 p-2 md:p-4 xl:p-6 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)] mb-6 mt-6">
-              <TabsTrigger 
-                value="experience" 
+              <TabsTrigger
+                value="experience"
                 className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
-              > 
+              >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserTie className="text-lg md:text-xl text-green-400" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">Experiência</span>
+                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                    Experiência
+                  </span>
                 </div>
               </TabsTrigger>
-              <TabsTrigger 
-                value="education" 
+              <TabsTrigger
+                value="education"
                 className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
-              > 
+              >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserGraduate className="text-lg md:text-xl text-green-400" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">Educação</span>
+                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                    Educação
+                  </span>
                 </div>
               </TabsTrigger>
-              <TabsTrigger 
-                value="about" 
+              <TabsTrigger
+                value="about"
                 className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
-              > 
+              >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaCode className="text-lg md:text-xl text-green-400" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">Sobre mim</span>
+                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                    Sobre mim
+                  </span>
                 </div>
               </TabsTrigger>
             </TabsList>
@@ -179,13 +188,13 @@ export default function Resume() {
 
             {/* Education */}
             <TabsContent value="education" className="w-full">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 className="flex flex-col gap-4 md:gap-[30px] text-center xl:text-left"
               >
-                <motion.h3 
+                <motion.h3
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
@@ -193,8 +202,8 @@ export default function Resume() {
                 >
                   {education.title}
                 </motion.h3>
-                
-                <motion.p 
+
+                <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
@@ -211,36 +220,39 @@ export default function Resume() {
                       initial="hidden"
                       animate="visible"
                       variants={fadeInUp}
-                      whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+                      whileHover={{
+                        scale: 1.03,
+                        transition: { duration: 0.2 },
+                      }}
                       className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl overflow-hidden flex flex-col justify-center p-4 md:p-6 h-full shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                     >
                       {/* Bordas animadas */}
-                      <motion.span 
+                      <motion.span
                         variants={borderVariants}
                         animate="animate"
                         className="absolute top-0 left-0 w-full h-[2px]"
                       ></motion.span>
-                      <motion.span 
+                      <motion.span
                         variants={borderVariants}
                         animate="animate"
                         className="absolute bottom-0 left-0 w-full h-[2px]"
                         style={{ animationDelay: "0.5s" }}
                       ></motion.span>
-                      <motion.span 
+                      <motion.span
                         variants={borderVariants}
                         animate="animate"
                         className="absolute top-0 right-0 w-[2px] h-full"
                         style={{ animationDelay: "1s" }}
                       ></motion.span>
-                      <motion.span 
+                      <motion.span
                         variants={borderVariants}
                         animate="animate"
                         className="absolute top-0 left-0 w-[2px] h-full"
                         style={{ animationDelay: "1.5s" }}
                       ></motion.span>
-                      
+
                       <div className="flex flex-col items-center gap-2 md:gap-3 z-10 py-2 md:py-4">
-                        <motion.span 
+                        <motion.span
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.2 * index, duration: 0.5 }}
@@ -248,8 +260,8 @@ export default function Resume() {
                         >
                           {item.duration}
                         </motion.span>
-                        
-                        <motion.h3 
+
+                        <motion.h3
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 * index, duration: 0.5 }}
@@ -257,15 +269,17 @@ export default function Resume() {
                         >
                           {item.course}
                         </motion.h3>
-                        
-                        <motion.div 
+
+                        <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.4 * index, duration: 0.5 }}
                           className="flex items-center gap-2 md:gap-3 mt-1 md:mt-2"
                         >
                           <span className="w-[6px] h-[6px] rounded-full bg-green-400 shadow-[0_0_5px_rgba(74,222,128,0.5)]"></span>
-                          <p className="text-white/70 text-xs md:text-base">{item.institution}</p>
+                          <p className="text-white/70 text-xs md:text-base">
+                            {item.institution}
+                          </p>
                         </motion.div>
                       </div>
                     </motion.div>
@@ -277,7 +291,7 @@ export default function Resume() {
             {/* About Me */}
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-4 md:gap-[30px] text-center xl:text-left">
-                <motion.h3 
+                <motion.h3
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
@@ -285,8 +299,8 @@ export default function Resume() {
                 >
                   {about.title}
                 </motion.h3>
-                
-                <motion.p 
+
+                <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
@@ -297,13 +311,15 @@ export default function Resume() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px]">
                   {/* Skills Section */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">Habilidades</h4>
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">
+                      Habilidades
+                    </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {about.skills.map((skill, index) => (
                         <motion.span
@@ -311,10 +327,10 @@ export default function Resume() {
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ duration: 0.3, delay: 0.1 * index }}
-                          whileHover={{ 
-                            scale: 1.1, 
+                          whileHover={{
+                            scale: 1.1,
                             backgroundColor: "rgba(74, 222, 128, 0.3)",
-                            transition: { duration: 0.2 } 
+                            transition: { duration: 0.2 },
                           }}
                           className="bg-green-400/10 text-green-400 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-green-400/20 shadow-[0_4px_10px_rgba(0,0,0,0.1)] cursor-default transition-all duration-300"
                         >
@@ -325,13 +341,15 @@ export default function Resume() {
                   </motion.div>
 
                   {/* Hobbies Section */}
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">Hobbies</h4>
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">
+                      Hobbies
+                    </h4>
                     <ul className="flex flex-col gap-2 md:gap-4">
                       {about.hobbies.map((hobby, index) => (
                         <motion.li
@@ -343,44 +361,72 @@ export default function Resume() {
                           className="flex items-start gap-2 md:gap-3 group transition-all duration-300"
                         >
                           <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-green-400 shadow-[0_0_5px_rgba(74,222,128,0.5)] group-hover:scale-125 transition-all duration-300"></span>
-                          <p className="text-white/80 group-hover:text-white transition-colors duration-300 text-xs md:text-base">{hobby}</p>
+                          <p className="text-white/80 group-hover:text-white transition-colors duration-300 text-xs md:text-base">
+                            {hobby}
+                          </p>
                         </motion.li>
                       ))}
                     </ul>
                   </motion.div>
                 </div>
-                
+
                 {/* Resumo de Competências */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   className="mt-4 md:mt-6 bg-gradient-to-r from-green-400/20 to-green-500/10 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                 >
-                  <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-white drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]">Resumo de Competências</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+                  <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-white drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]">
+                    Resumo de Competências
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiCodeAlt className="text-xl md:text-2xl text-green-400" />
                       </div>
-                      <h5 className="text-base md:text-lg font-medium mb-1">Desenvolvimento Front-end</h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">Criação de interfaces web responsivas e modernas</p>
+                      <h5 className="text-base md:text-lg font-medium mb-1">
+                        Desenvolvimento Front-end
+                      </h5>
+                      <p className="text-white/60 text-xs md:text-sm text-center">
+                        Criação de interfaces web responsivas e modernas
+                      </p>
                     </div>
-                    
+
+                    <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
+                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
+                        <BiServer className="text-xl md:text-2xl text-green-400" />
+                      </div>
+                      <h5 className="text-base md:text-lg font-medium mb-1">
+                        Desenvolvimento Backend
+                      </h5>
+                      <p className="text-white/60 text-xs md:text-sm text-center">
+                        APIs robustas e serviços escaláveis
+                      </p>
+                    </div>
+
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiMobile className="text-xl md:text-2xl text-green-400" />
                       </div>
-                      <h5 className="text-base md:text-lg font-medium mb-1">Desenvolvimento Mobile</h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">Aplicativos nativos e multiplataforma</p>
+                      <h5 className="text-base md:text-lg font-medium mb-1">
+                        Desenvolvimento Mobile
+                      </h5>
+                      <p className="text-white/60 text-xs md:text-sm text-center">
+                        Aplicativos nativos e multiplataforma
+                      </p>
                     </div>
-                    
+
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiLaptop className="text-xl md:text-2xl text-green-400" />
                       </div>
-                      <h5 className="text-base md:text-lg font-medium mb-1">Design Responsivo</h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">Interfaces adaptadas para todos os dispositivos</p>
+                      <h5 className="text-base md:text-lg font-medium mb-1">
+                        Design Responsivo
+                      </h5>
+                      <p className="text-white/60 text-xs md:text-sm text-center">
+                        Interfaces adaptadas para todos os dispositivos
+                      </p>
                     </div>
                   </div>
                 </motion.div>
