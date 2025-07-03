@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const TechnicalTestsPage = () => {
   return (
     <section className="min-h-screen py-12">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 lg:px-6 xl:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="h1 mb-4">

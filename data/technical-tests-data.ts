@@ -3,129 +3,56 @@ export interface TechnicalTest {
   title: string;
   description: string;
   image: string;
-  category: "Frontend" | "Backend" | "Mobile";
+  category: "Frontend" | "Mobile";
   position: string;
-  company?: string;
   repositoryUrl?: string;
+  backendRepositoryUrl?: string;
   liveUrl?: string;
   technologies: string[];
-  completedDate: string;
   status: "Concluído" | "Em andamento" | "Finalizado";
 }
 
 export const technicalTestsData: TechnicalTest[] = [
   {
     id: 1,
-    title: "Sistema de E-commerce",
-    description: "Desenvolvimento de uma plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo.",
-    image: "/images-projects/webcarros.png",
-    category: "Frontend",
-    position: "Desenvolvedor Frontend Sênior",
-    company: "TechCorp",
-    repositoryUrl: "https://github.com/usuario/ecommerce-test",
-    liveUrl: "https://ecommerce-test.vercel.app",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
-    completedDate: "2024-12-15",
+    title: "App de E-commerce com Flutter",
+    description: "Aplicativo Flutter para e-commerce, consumindo produtos de dois fornecedores via API, com busca, filtros avançados,carrinho persistente e finalização de compra com banco de dados de uma api",
+    image: "/images-projects/flutterEcommerce.png",
+    category: "Mobile",
+    position: "Desenvolvedor Fullstack Junior",
+    repositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack",
+    backendRepositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack/tree/master/backend",
+    technologies: ["Flutter", "Http", "TypeScript", "Material Design","Shared Preferences"],
     status: "Concluído"
   },
   {
     id: 2,
-    title: "API de Gestão de Tarefas",
-    description: "API RESTful para gerenciamento de tarefas com autenticação JWT, CRUD completo e documentação com Swagger.",
-    image: "/images-projects/mygoals.png",
-    category: "Backend",
-    position: "Desenvolvedor Backend Pleno",
-    company: "StartupXYZ",
-    repositoryUrl: "https://github.com/usuario/tasks-api",
-    technologies: ["Node.js", "Express", "TypeScript", "PostgreSQL", "JWT", "Swagger"],
-    completedDate: "2024-11-20",
+    title: "App Web de Ecommerce com ReactJs",
+    description: "Aplicação web de e-commerce desenvolvida com React.js, utilizando Context API para gerenciamento de estado , React Router para navegação, e integração com uma API RESTful para gerenciamento de produtos e carrinho de compras.",
+    image: "/images-projects/webEcommerce.png",
+    category: "Frontend",
+    position: "Desenvolvedor Fullstack Junior",
+    repositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack",
+    backendRepositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack/tree/master/backend",
+    technologies: ["React.js", "React Router v7", "Context API", "Axios", "TypeScript", "React Hook Form", "Zod", "Vitest" , "Tailwind CSS" , "React Query"],
     status: "Concluído"
   },
   {
     id: 3,
-    title: "App de Delivery",
-    description: "Aplicativo mobile para delivery de comida com geolocalização, pagamentos online e rastreamento em tempo real.",
-    image: "/images-projects/gdelivery.png",
+    title: "App Fitness",
+    description: "Aplicativo mobile para acompanhamento de atividades físicas, com funcionalidades de registro de treinos, monitoramento de progresso , integracao com chatbot(IA Gemini com prompt personalizado para sugestões de treinos e dicas de saúde).",
+    image: "/images-projects/fitnessApp.png",
     category: "Mobile",
-    position: "Desenvolvedor Mobile React Native",
-    company: "FoodTech",
-    repositoryUrl: "https://github.com/usuario/delivery-app",
-    technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Google Maps", "Stripe"],
-    completedDate: "2024-10-30",
+    position: "Desenvolvedor Mobile Fullstack",
+    repositoryUrl: "https://github.com/PhelipeG/teste-fullstack-mobile",
+    backendRepositoryUrl: "https://github.com/PhelipeG/teste-fullstack-mobile/tree/master/backend",
+    technologies: ["React Native", "Expo", "TypeScript", "Axios", "Zustand", "Expo Router", "Expo Secure Store", "Gemini AI" , "Nativewind", "React Query"],
     status: "Concluído"
   },
-  {
-    id: 4,
-    title: "Dashboard Analytics",
-    description: "Painel de controle com gráficos interativos, relatórios em tempo real e sistema de filtros avançados.",
-    image: "/images-projects/healtcare.png",
-    category: "Frontend",
-    position: "Desenvolvedor Frontend Junior",
-    company: "DataViz Inc",
-    repositoryUrl: "https://github.com/usuario/analytics-dashboard",
-    liveUrl: "https://analytics-dashboard.vercel.app",
-    technologies: ["Vue.js", "Chart.js", "Vuetify", "Axios", "WebSocket"],
-    completedDate: "2024-09-15",
-    status: "Concluído"
-  },
-  {
-    id: 5,
-    title: "Microserviços de Usuários",
-    description: "Arquitetura de microserviços para gestão de usuários com Docker, Redis e implementação de CQRS.",
-    image: "/images-projects/mycontacts.png",
-    category: "Backend",
-    position: "Desenvolvedor Backend Sênior",
-    company: "MicroTech",
-    repositoryUrl: "https://github.com/usuario/user-microservices",
-    technologies: ["Node.js", "NestJS", "Docker", "Redis", "MongoDB", "RabbitMQ"],
-    completedDate: "2024-08-22",
-    status: "Concluído"
-  },
-  {
-    id: 6,
-    title: "App de Fitness",
-    description: "Aplicativo de fitness com tracking de exercícios, planos de treino personalizados e integração com wearables.",
-    image: "/images-projects/iweather.png",
-    category: "Mobile",
-    position: "Desenvolvedor Mobile Flutter",
-    company: "FitnessTech",
-    repositoryUrl: "https://github.com/usuario/fitness-app",
-    technologies: ["Flutter", "Dart", "Firebase", "HealthKit", "Google Fit"],
-    completedDate: "2024-07-10",
-    status: "Concluído"
-  },
-  {
-    id: 7,
-    title: "Plataforma de Streaming",
-    description: "Interface web para plataforma de streaming com player customizado, sistema de favoritos e recomendações.",
-    image: "/images-projects/pizzashop-web.png",
-    category: "Frontend",
-    position: "Desenvolvedor Frontend Pleno",
-    company: "StreamCorp",
-    repositoryUrl: "https://github.com/usuario/streaming-platform",
-    liveUrl: "https://streaming-platform.vercel.app",
-    technologies: ["Angular", "RxJS", "Material UI", "Video.js", "PWA"],
-    completedDate: "2024-06-25",
-    status: "Concluído"
-  },
-  {
-    id: 8,
-    title: "Sistema de Chat Real-time",
-    description: "Sistema de chat em tempo real com salas, mensagens privadas e notificações push.",
-    image: "/images-projects/pass-in.png",
-    category: "Backend",
-    position: "Desenvolvedor Fullstack Junior",
-    company: "ChatApp",
-    repositoryUrl: "https://github.com/usuario/realtime-chat",
-    technologies: ["Socket.io", "Node.js", "React", "MongoDB", "JWT"],
-    completedDate: "2024-05-18",
-    status: "Concluído"
-  }
 ];
 
 export const categoryOptions = [
   { value: "all", label: "Todos" },
   { value: "Frontend", label: "Frontend" },
-  { value: "Backend", label: "Backend" },
   { value: "Mobile", label: "Mobile" }
 ];

@@ -27,7 +27,17 @@ const TechnicalTestsGrid = () => {
   };
 
   return (
-    <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
+    <div className="max-w-[1800px] mx-auto px-4 lg:px-6 xl:px-8">
+      {/* Informação sobre Backend */}
+      <div className="text-center mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+          <p className="text-blue-400 text-sm font-medium">
+            💡 O código backend dos projetos fullstack está disponível no card do projeto
+          </p>
+        </div>
+      </div>
+
       {/* Filtros */}
       <CategoryFilter 
         selectedCategory={selectedCategory}
@@ -43,11 +53,11 @@ const TechnicalTestsGrid = () => {
 
       {/* Grade de Cards */}
       {filteredTests.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-10 xl:gap-12">
           {filteredTests.map((test) => (
             <div
               key={test.id}
-              className="animate-fade-in"
+              className="animate-fade-in w-full"
               style={{
                 animationDelay: `${(test.id % 6) * 100}ms`
               }}

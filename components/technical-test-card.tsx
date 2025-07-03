@@ -31,9 +31,9 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
   };
 
   return (
-    <Card className="bg-white/5 border-white/10 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group overflow-hidden w-full h-full min-h-[600px] flex flex-col">
+    <Card className="bg-white/5 border-white/10 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group overflow-hidden w-full h-full min-h-[800px] flex flex-col">
       {/* Imagem */}
-      <div className="relative h-56 lg:h-64 overflow-hidden flex-shrink-0">
+      <div className="relative h-72 lg:h-80 xl:h-72 overflow-hidden flex-shrink-0">
         <Image
           src={test.image}
           alt={test.title}
@@ -58,7 +58,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
           <CardTitle className="text-white group-hover:text-accent transition-colors text-xl lg:text-2xl">
             {test.title}
           </CardTitle>
-          <CardDescription className="text-white/70 line-clamp-2 text-base lg:text-lg">
+          <CardDescription className="text-white/70 text-base lg:text-lg leading-relaxed">
             {test.description}
           </CardDescription>
         </CardHeader>
@@ -71,25 +71,16 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                 <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-accent flex-shrink-0" />
                 <span className="font-medium">{test.position}</span>
               </div>
-              {test.company && (
-                <div className="text-sm lg:text-base text-white/60 ml-6 lg:ml-7">
-                  {test.company}
-                </div>
-              )}
-              <div className="flex items-center gap-2 text-sm lg:text-base text-white/60 ml-6 lg:ml-7">
-                <Calendar className="h-4 w-4 lg:h-5 lg:w-5 flex-shrink-0" />
-                <span>Concluído em {formatDate(test.completedDate)}</span>
-              </div>
             </div>
 
             {/* Tecnologias */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h4 className="text-sm lg:text-base font-medium text-white">Tecnologias:</h4>
               <div className="flex flex-wrap gap-2">
                 {test.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-2 py-1 text-xs lg:text-sm bg-white/10 text-white/80 rounded border border-white/20 hover:border-accent/50 transition-colors"
+                    className="px-3 py-2 text-xs lg:text-sm bg-white/10 text-white/90 rounded-md border border-white/20 hover:border-accent/50 hover:bg-white/15 transition-all duration-200 font-medium"
                   >
                     {tech}
                   </span>
@@ -99,27 +90,40 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
           </div>
 
           {/* Links */}
-          <div className="flex gap-3 pt-4">
-            {test.repositoryUrl && (
+          <div className="flex flex-col gap-3 pt-4">
+            <div className="flex gap-3">
+              {test.repositoryUrl && (
+                <Link
+                  href={test.repositoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-white/10 hover:bg-accent/20 text-white hover:text-accent rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
+                >
+                  <Github className="h-4 w-4 lg:h-5 lg:w-5" />
+                  {test.category === "Frontend" ? "Código Frontend" : "Código"}
+                </Link>
+              )}
+              {test.liveUrl && (
+                <Link
+                  href={test.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-accent/20 hover:bg-accent text-white hover:text-primary rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
+                >
+                  <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
+                  Demo
+                </Link>
+              )}
+            </div>
+            {test.backendRepositoryUrl && (
               <Link
-                href={test.repositoryUrl}
+                href={test.backendRepositoryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 bg-white/10 hover:bg-accent/20 text-white hover:text-accent rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
+                className="flex items-center gap-2 px-4 py-3 bg-green-500/20 hover:bg-green-500/30 text-green-400 hover:text-green-300 rounded-lg transition-all duration-300 text-sm lg:text-base font-medium justify-center border border-green-500/30"
               >
                 <Github className="h-4 w-4 lg:h-5 lg:w-5" />
-                Código
-              </Link>
-            )}
-            {test.liveUrl && (
-              <Link
-                href={test.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 bg-accent/20 hover:bg-accent text-white hover:text-primary rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
-              >
-                <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
-                Demo
+                Código Backend
               </Link>
             )}
           </div>
