@@ -22,7 +22,7 @@ export const services: ServiceData[] = [{
     {
       icon: RiCodeBoxLine,
       title: "Desenvolvimento Frontend",
-      description: "Criação de interfaces modernas e responsivas com React, Next.js e TypeScript."
+      description: "Criação de interfaces modernas com React, Next.js, Vue, Nuxt e TypeScript."
     },
     {
       icon: RiServerLine,
@@ -32,7 +32,7 @@ export const services: ServiceData[] = [{
     {
       icon: RiMobileDownloadLine,
       title: "Desenvolvimento Mobile",
-      description: "Aplicativos nativos e multiplataforma com React Native para iOS e Android."
+      description: "Aplicativos multiplataforma com React Native, Expo e Flutter para iOS e Android."
     },
     {
       icon: RiLayoutGridLine,

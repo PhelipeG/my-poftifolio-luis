@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
-import { FaCss3, FaDocker, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiExpo, SiNextdotjs, SiPostgresql, SiStyledcomponents, SiTailwindcss } from "react-icons/si";
+import { FaAngular, FaCss3, FaDocker, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { SiExpo, SiFlutter, SiNextdotjs, SiNuxtdotjs, SiPostgresql, SiStyledcomponents, SiTailwindcss, SiVuedotjs } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
 
 interface SkillsItem {
@@ -49,6 +49,18 @@ export const skills : SkillsData[] = [{
       name: "Next.js",
     },
     {
+      icon: SiVuedotjs,
+      name: "Vue.js",
+    },
+    {
+      icon: SiNuxtdotjs,
+      name: "Nuxt",
+    },
+    {
+      icon: FaAngular,
+      name: "Angular",
+    },
+    {
       icon: FaDocker,
       name: "Docker",
     },
@@ -67,6 +79,10 @@ export const skills : SkillsData[] = [{
     {
       icon: SiExpo,
       name: "Expo",
+    },
+    {
+      icon: SiFlutter,
+      name: "Flutter",
     },
     {
       icon: SiStyledcomponents,

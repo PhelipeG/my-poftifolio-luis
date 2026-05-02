@@ -16,8 +16,8 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange }: CategoryFilterPr
           onClick={() => onCategoryChange(option.value)}
           className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 border ${
             selectedCategory === option.value
-              ? "bg-green-500 text-primary border-green-500 shadow-lg scale-105"
-              : "bg-transparent text-white border-white/20 hover:border-green-500 hover:text-green-500 hover:scale-105"
+              ? "bg-accent text-black border-accent shadow-lg scale-105"
+              : "bg-transparent text-white border-white/20 hover:border-accent hover:text-accent hover:scale-105"
           }`}
         >
           {option.label}

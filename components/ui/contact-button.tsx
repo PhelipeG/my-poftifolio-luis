@@ -1,14 +1,14 @@
-"use client";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ContactButton() {
   return (
     <Button
+      asChild
       size="lg"
-      className="bg-green-400 hover:bg-green-500 text-black font-medium rounded-xl px-8 py-6 shadow-[0_8px_30px_rgba(74,222,128,0.3)] transition-all duration-300"
-      onClick={() => window.location.href = '/contact'}
+      className="rounded-full bg-accent px-8 py-6 font-bold text-black shadow-[0_14px_38px_rgba(29,185,84,0.24)] transition-all duration-300 hover:bg-accent-hover hover:text-black"
     >
-      Entre em contato
+      <Link href="/contact">Entre em contato</Link>
     </Button>
   );
 }

@@ -1,58 +1,48 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { experience } from "@/data/experience-data";
 
 export default function Timeline() {
   return (
-    <div className="max-w-[1600px] mx-auto px-6 lg:px-8 p-4">
-      <div className="relative">
-        {/* Vertical line */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 0.8, duration: 1, ease: "easeIn" },
-          }}
-          className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-green-500 transform -translate-x-1/2"
-        ></motion.div>
+    <div className="w-full">
+      <div className="mb-8">
+        <span className="font-mono text-xs uppercase tracking-[0.24em] text-accent">experiência</span>
+        <h2 className="mt-3 font-display text-4xl font-extrabold leading-none text-white md:text-6xl">
+          Trajetória com produto, negócio e execução.
+        </h2>
+      </div>
 
-        {/* Timeline items */}
+      <div className="relative grid gap-4">
+        <motion.div
+          initial={{ scaleY: 0 }}
+          animate={{ scaleY: 1 }}
+          transition={{ delay: 0.2, duration: 0.9, ease: "easeOut" }}
+          className="absolute left-4 top-2 hidden h-[calc(100%-1rem)] w-px origin-top bg-gradient-to-b from-accent via-accent-hover to-white/20 md:block"
+        />
+
         {experience.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.5 }}
-            className={`mb-8 flex justify-between items-center w-full ${
-              index % 2 === 0 ? "flex-row-reverse" : ""
-            }`}
+            transition={{ delay: index * 0.12, ease: "easeOut", duration: 0.55 }}
+            className="relative rounded-lg border border-white/10 bg-white/[0.055] p-5 md:ml-12 md:p-7"
           >
-            <div className="w-2/12 lg:w-1/12"></div>
-            <div className="z-20">
-              <div className="w-4 h-4 bg-primary rounded-full"></div>
+            <div className="absolute -left-[39px] top-8 hidden size-3 rounded-full bg-accent shadow-[0_0_0_8px_rgba(29,185,84,0.12)] md:block" />
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{item.date}</p>
+                <h3 className="mt-3 font-display text-2xl font-bold text-white md:text-3xl">{item.title}</h3>
+                <p className="mt-1 text-sm font-semibold uppercase tracking-[0.16em] text-accent">{item.enterprise}</p>
+              </div>
+              <span className="w-fit rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-white/45">
+                0{index + 1}
+              </span>
             </div>
-            <Card className="w-8/12 lg:w-9/12 bg-slate-100 text-green-500">
-              <CardHeader>
-                <CardTitle className=" text-sm">{item.title}</CardTitle>
-                <span className="font-bold text-primary">
-                  {item.enterprise}
-                </span>
-                <CardDescription className="text-primary">
-                  {item.date}
-                </CardDescription>
-              </CardHeader>
-              {/* <CardContent className="text-gray-500">
-                <p>{item.description}</p>
-              </CardContent> */}
-            </Card>
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-white/62 md:text-base">
+              {item.description}
+            </p>
           </motion.div>
         ))}
       </div>

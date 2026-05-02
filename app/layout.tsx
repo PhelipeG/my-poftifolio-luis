@@ -1,13 +1,27 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, JetBrains_Mono, Manrope } from "next/font/google";
 import { Header } from "../components/header";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Reduzindo variantes de fonte para melhorar a performance
-  display: 'swap', // Garante que o texto seja exibido com uma fonte de fallback enquanto a fonte principal carrega
+  weight: ["400", "500", "600", "700"],
+  display: 'swap',
   variable: "--font-jetbrains-mono",
 });
 
@@ -15,6 +29,14 @@ export const metadata: Metadata = {
   title: "Portfolio Luis",
   description: "Este é o meu portfólio onde você pode encontrar meus projetos e informações sobre mim.",
   authors: [{ name: "Luis Felipe G Silva" }],
+  icons: {
+    icon: "/icon.svg",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -24,21 +46,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Preload das fontes e recursos críticos */}
-        <link 
-          rel="preload" 
-          href="/images/hero-1.png" 
-          as="image" 
-        />
-        {/* Preconnect para domínios externos */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Meta tags para melhorar SEO */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body
-        className={`${jetbrainsMono.variable} antialiased`}
+        className={`${bricolage.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <SpeedInsights />
         <Header />

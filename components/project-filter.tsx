@@ -13,15 +13,15 @@ const projectCategories = [
 
 const ProjectFilter = ({ selectedCategory, onCategoryChange }: ProjectFilterProps) => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center mb-8">
+    <div className="mb-8 flex flex-wrap justify-center gap-3">
       {projectCategories.map((option) => (
         <button
           key={option.value}
           onClick={() => onCategoryChange(option.value)}
-          className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 border ${
+          className={`rounded-full border px-6 py-3 text-sm font-bold transition-all duration-300 ${
             selectedCategory === option.value
-              ? "bg-green-500 text-primary border-green-500 shadow-lg scale-105"
-              : "bg-transparent text-white border-white/20 hover:border-green-500 hover:text-green-500 hover:scale-105"
+              ? "border-accent bg-accent text-black"
+              : "border-white/15 bg-transparent text-white/70 hover:border-accent hover:text-accent"
           }`}
         >
           {option.label}

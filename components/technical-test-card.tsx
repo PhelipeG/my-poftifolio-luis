@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, ExternalLink, Github, MapPin } from "lucide-react";
+import { ExternalLink, Github, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { TechnicalTest } from "@/data/technical-tests-data";
 
@@ -9,22 +9,14 @@ interface TechnicalTestCardProps {
 }
 
 const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Frontend':
-        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+        return 'bg-accent/15 text-accent border-accent/30';
       case 'Backend':
-        return 'bg-green-500/20 text-green-400 border-green-500/30';
+        return 'bg-accent/15 text-accent border-accent/30';
       case 'Mobile':
-        return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
+        return 'bg-accent/15 text-accent border-accent/30';
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
@@ -38,6 +30,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
           src={test.image}
           alt={test.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           className="object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -48,7 +41,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
         </div>
         
         {/* Status */}
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-medium">
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent/15 text-accent border border-accent/30 text-xs font-medium">
           {test.status}
         </div>
       </div>
@@ -120,7 +113,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                 href={test.backendRepositoryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 bg-green-500/20 hover:bg-green-500/30 text-green-400 hover:text-green-300 rounded-lg transition-all duration-300 text-sm lg:text-base font-medium justify-center border border-green-500/30"
+                className="flex items-center gap-2 px-4 py-3 bg-accent/15 hover:bg-accent/25 text-accent rounded-lg transition-all duration-300 text-sm lg:text-base font-medium justify-center border border-accent/30"
               >
                 <Github className="h-4 w-4 lg:h-5 lg:w-5" />
                 Código Backend

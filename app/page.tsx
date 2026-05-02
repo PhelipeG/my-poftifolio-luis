@@ -1,104 +1,117 @@
-import { Button } from "@/components/ui/button";
 import { ProfilePic } from "../components/profile-pic";
 import { Social } from "../components/social-links";
-import ClientWrapper from "@/components/client-wrapper";
 import CarrouselSkills from "@/components/carrousel-skills";
-import dynamic from "next/dynamic";
-
-// Importando o componente de serviços com lazy loading
-const ServicesSection = dynamic(() => import("@/components/services-section"), { ssr: true });
-const DownloadButton = dynamic(() => import("@/components/ui/download-button"), { ssr: false });
-const ContactButton = dynamic(() => import("@/components/ui/contact-button"), { ssr: false });
+import ServicesSection from "@/components/services-section";
+import DownloadButton from "@/components/ui/download-button";
+import ContactButton from "@/components/ui/contact-button";
+import { ArrowUpRight, Cpu, Layers3, Smartphone } from "lucide-react";
 
 export default function Home() {
-  return (
-    <div className="h-full min-h-screen py-12">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
-        {/* Hero Section */}
-        <ClientWrapper>
-          <div className="flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-20 xl:pt-8 xl:pb-20">
-            <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl">
-              <span className="inline-block py-1 px-4 rounded-full border border-green-400/30 bg-green-400/10 text-green-400 font-medium text-sm mb-6">
-                Desenvolvedor Front-end e Mobile
-              </span>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-[0_5px_15px_rgba(74,222,128,0.15)]">
-                Olá, me chamo {" "}
-                <span className="bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-                  Luis Felipe Guilhao
-                </span>
-              </h1>
-              
-              <p className="text-white/70 mb-8 text-lg leading-relaxed">
-                Desenvolvendo soluções digitais de alta qualidade com foco em experiência do usuário, 
-                desempenho e código limpo para criar produtos que causam impacto.
-              </p>
-              
-              <div className="flex flex-col xl:flex-row items-center gap-5">
-                <DownloadButton />
+  const highlights = [
+    { value: "20+", label: "projetos web e mobile" },
+    { value: "35%", label: "ganho com automações" },
+    { value: "40%", label: "redução em tempo de resposta" },
+    { value: "3", label: "stacks principais" },
+  ];
 
-                <div className="mb-8 xl:mb-0">
+  return (
+    <main className="min-h-screen overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
+        <section className="grid min-h-[calc(100vh-84px)] grid-cols-1 items-center gap-12 py-10 lg:grid-cols-[1.02fr_0.98fr] lg:py-16">
+            <div className="order-2 max-w-4xl lg:order-none">
+              <div className="mb-8 flex flex-wrap items-center gap-3">
+                <span className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 font-mono text-xs uppercase tracking-[0.24em] text-accent">
+                  Front-end + Mobile
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-white/70">
+                  React, Next, Vue, Nuxt, Angular, Flutter
+                </span>
+              </div>
+
+              <h1 className="font-display text-6xl font-extrabold leading-[0.88] tracking-normal text-white md:text-8xl xl:text-[118px]">
+                Luis Felipe
+                <span className="block text-accent">Guilhão</span>
+              </h1>
+
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
+                Desenvolvedor que cria interfaces web e mobile com performance, direção visual forte e arquitetura limpa para produtos digitais que precisam parecer atuais e funcionar bem.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center">
+                <DownloadButton />
+                <ContactButton />
+              </div>
+
+              <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
+                <div>
                   <Social
                     containerStyles="flex gap-6"
-                    iconStyles="w-12 h-12 border border-white/10 bg-white/5 backdrop-blur-sm rounded-full flex justify-center items-center text-white text-xl hover:border-green-400/50 hover:text-green-400 hover:scale-110 shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300"
+                    iconStyles="w-12 h-12 border border-white/10 bg-white/5 backdrop-blur-sm rounded-full flex justify-center items-center text-white text-xl hover:border-accent/50 hover:text-accent hover:-translate-y-1 shadow-[0_8px_30px_rgba(0,0,0,0.18)] transition-all duration-300"
                   />
+                </div>
+                <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-white/45">
+                  <ArrowUpRight size={16} className="text-accent" />
+                  Disponível para remoto
                 </div>
               </div>
             </div>
-            
-            <div className="order-1 xl:order-none relative">
+
+            <div className="order-1 lg:order-none">
               <div className="relative z-10">
                 <ProfilePic />
               </div>
-              
-              {/* Efeito de brilho atrás da imagem */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-green-400/20 to-purple-500/20 rounded-full blur-3xl -z-10"></div>
             </div>
+        </section>
+
+        <section className="grid gap-4 py-8 md:grid-cols-4">
+          {highlights.map((item) => (
+            <div key={item.label} className="texture-panel rounded-lg p-5">
+              <div className="font-display text-4xl font-extrabold text-accent">{item.value}</div>
+              <p className="mt-2 text-sm text-white/60">{item.label}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="grid gap-6 py-16 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-[0.24em] text-accent">Stack atual</span>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-none md:text-6xl">
+              Web, mobile e produto no mesmo fluxo.
+            </h2>
           </div>
-        </ClientWrapper>
-        
-        {/* Services Section */}
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              { icon: Layers3, title: "Web moderna", text: "React, Next.js, Vue.js, Nuxt, Angular, TypeScript e Tailwind." },
+              { icon: Smartphone, title: "Mobile", text: "React Native, Expo e Flutter para apps multiplataforma." },
+              { icon: Cpu, title: "Produto", text: "UI/UX, integrações, performance, testes e automações." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-lg border border-white/10 bg-white/[0.06] p-6">
+                <item.icon className="mb-6 text-accent" size={30} />
+                <h3 className="font-display text-2xl font-bold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/58">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <ServicesSection />
-        
-        {/* Stats Counter */}
-        <div className="my-20 py-14 px-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">2+</div>
-              <div className="text-white/70">Anos de experiência</div>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
-              <div className="text-white/70">Projetos completos</div>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">10+</div>
-              <div className="text-white/70">Clientes satisfeitos</div>
-            </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-              <div className="text-white/70">Taxa de satisfação</div>
-            </div>
+      </div>
+
+      <CarrouselSkills />
+
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-8 py-20">
+        <div className="relative overflow-hidden rounded-lg border border-accent/30 bg-[#050505] p-8 text-white md:p-14">
+          <div className="absolute right-0 top-0 h-full w-1/3 bg-[linear-gradient(135deg,rgba(29,185,84,0.34),rgba(29,185,84,0.04))]" />
+          <div className="relative max-w-3xl">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">próximo produto</p>
+            <h2 className="mt-4 font-display text-4xl font-extrabold leading-none md:text-6xl">Vamos construir uma interface que pareça inevitável?</h2>
+            <p className="mt-5 max-w-xl text-white/60">Trabalho com implementação front-end, aplicativos mobile e acabamento de experiência para produtos digitais.</p>
+          </div>
+          <div className="relative mt-8">
+          <ContactButton />
           </div>
         </div>
       </div>
-      
-      {/* Skills Carousel */}
-      <div>
-        <CarrouselSkills />
-      </div>
-      
-      {/* Call to Action */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-8 mt-20 text-center">
-        <div className="bg-gradient-to-r from-green-400/20 to-purple-500/20 backdrop-blur-md rounded-3xl py-16 px-8 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos trabalhar juntos?</h2>
-          <p className="text-white/70 mb-8 max-w-2xl mx-auto">Estou disponível para projetos freelance, colaborações e oportunidades de trabalho remoto.</p>
-          <ContactButton />
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }

@@ -3,14 +3,44 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-primary bg-primary text-white leading-loose;
+  :root {
+    --radius: 0.5rem;
+    --ink: #000000;
+    --paper: #050505;
+    --acid: #1DB954;
+    --aqua: #1ed760;
+    --coral: #ffffff;
+    --steel: #9ca3af;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-primary bg-primary text-white leading-relaxed;
+    background: #000000;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(29, 185, 84, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29, 185, 84, 0.08) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 72%);
+  }
+
   .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    @apply font-display text-[48px] xl:text-[88px] leading-[0.92] font-extrabold;
   }
   .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+    @apply font-display text-[36px] xl:text-[56px] leading-[0.98] font-bold;
   }
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
@@ -20,27 +50,25 @@
   }
   
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #1DB954;
   }
 }
-
-
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-}
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
+  .texture-panel {
+    background:
+      linear-gradient(135deg, rgba(29, 185, 84, 0.16), rgba(255, 255, 255, 0.035));
+    border: 1px solid rgba(29, 185, 84, 0.22);
   }
 }

@@ -44,7 +44,7 @@ export default function Resume() {
   const borderVariants = {
     animate: {
       background: [
-        "linear-gradient(90deg, rgba(74,222,128,0) 0%, rgba(74,222,128,1) 50%, rgba(74,222,128,0) 100%)",
+        "linear-gradient(90deg, rgba(29,185,84,0) 0%, rgba(29,185,84,1) 50%, rgba(29,185,84,0) 100%)",
       ],
       backgroundSize: "200% 100%",
       backgroundPosition: ["100% 0%", "0% 0%", "100% 0%"],
@@ -73,7 +73,7 @@ export default function Resume() {
         animate="animate"
         className="absolute top-20 left-[10%] hidden md:block"
       >
-        <BiCodeAlt className="text-5xl text-green-400/30" />
+        <BiCodeAlt className="text-5xl text-accent/30" />
       </motion.div>
 
       <motion.div
@@ -83,7 +83,7 @@ export default function Resume() {
         style={{ animationDelay: "1s" }}
         className="absolute bottom-40 right-[15%] hidden md:block"
       >
-        <BiLaptop className="text-4xl text-green-400/20" />
+        <BiLaptop className="text-4xl text-accent/20" />
       </motion.div>
 
       <motion.div
@@ -93,7 +93,7 @@ export default function Resume() {
         style={{ animationDelay: "2s" }}
         className="absolute top-60 right-[10%] hidden md:block"
       >
-        <BiMobile className="text-3xl text-green-400/25" />
+        <BiMobile className="text-3xl text-accent/25" />
       </motion.div>
 
       <div className="max-w-[1600px] mx-auto px-6 lg:px-8 relative z-10">
@@ -103,8 +103,8 @@ export default function Resume() {
           transition={{ duration: 1 }}
           className="text-center mb-10 md:mb-16"
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-[0_5px_25px_rgba(74,222,128,0.2)]">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-white">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-[0_5px_25px_rgba(29,185,84,0.2)]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">
               Meu Currículo
             </span>
           </h1>
@@ -124,7 +124,7 @@ export default function Resume() {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="mt-6 md:mt-8 flex items-center gap-2 px-6 py-3 mx-auto bg-gradient-to-r from-green-500/80 to-green-600/80 rounded-full text-white font-medium shadow-[0_8px_20px_rgba(74,222,128,0.3)] hover:shadow-[0_8px_25px_rgba(74,222,128,0.5)] transition-all duration-300"
+            className="mt-6 md:mt-8 flex items-center gap-2 px-6 py-3 mx-auto bg-gradient-to-r from-accent/80 to-accent-hover/80 rounded-full text-white font-medium shadow-[0_8px_20px_rgba(29,185,84,0.3)] hover:shadow-[0_8px_25px_rgba(29,185,84,0.5)] transition-all duration-300"
           >
             <HiDownload className="text-xl" />
             <span>Download CV Completo</span>
@@ -144,10 +144,10 @@ export default function Resume() {
             <TabsList className="flex flex-col md:flex-row xl:flex-col w-full max-w-none xl:max-w-[380px] mx-auto xl:mx-0 gap-3 md:gap-4 xl:gap-6 p-2 md:p-4 xl:p-6 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)] mb-6 mt-6">
               <TabsTrigger
                 value="experience"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
-                  <FaUserTie className="text-lg md:text-xl text-green-400" />
+                  <FaUserTie className="text-lg md:text-xl text-accent" />
                   <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
                     Experiência
                   </span>
@@ -155,10 +155,10 @@ export default function Resume() {
               </TabsTrigger>
               <TabsTrigger
                 value="education"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
-                  <FaUserGraduate className="text-lg md:text-xl text-green-400" />
+                  <FaUserGraduate className="text-lg md:text-xl text-accent" />
                   <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
                     Educação
                   </span>
@@ -166,10 +166,10 @@ export default function Resume() {
               </TabsTrigger>
               <TabsTrigger
                 value="about"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500/20 data-[state=active]:to-green-400/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(74,222,128,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
-                  <FaCode className="text-lg md:text-xl text-green-400" />
+                  <FaCode className="text-lg md:text-xl text-accent" />
                   <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
                     Sobre mim
                   </span>
@@ -198,7 +198,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-white drop-shadow-[0_5px_15px_rgba(74,222,128,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(29,185,84,0.2)]"
                 >
                   {education.title}
                 </motion.h3>
@@ -256,7 +256,7 @@ export default function Resume() {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.2 * index, duration: 0.5 }}
-                          className="text-green-400 font-semibold bg-green-400/10 px-4 md:px-5 py-1.5 rounded-full text-xs md:text-sm shadow-[0_4px_10px_rgba(74,222,128,0.2)]"
+                          className="text-accent font-semibold bg-accent/10 px-4 md:px-5 py-1.5 rounded-full text-xs md:text-sm shadow-[0_4px_10px_rgba(29,185,84,0.2)]"
                         >
                           {item.duration}
                         </motion.span>
@@ -276,7 +276,7 @@ export default function Resume() {
                           transition={{ delay: 0.4 * index, duration: 0.5 }}
                           className="flex items-center gap-2 md:gap-3 mt-1 md:mt-2"
                         >
-                          <span className="w-[6px] h-[6px] rounded-full bg-green-400 shadow-[0_0_5px_rgba(74,222,128,0.5)]"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_5px_rgba(29,185,84,0.5)]"></span>
                           <p className="text-white/70 text-xs md:text-base">
                             {item.institution}
                           </p>
@@ -295,7 +295,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-white drop-shadow-[0_5px_15px_rgba(74,222,128,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(29,185,84,0.2)]"
                 >
                   {about.title}
                 </motion.h3>
@@ -317,7 +317,7 @@ export default function Resume() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(29,185,84,0.2)]">
                       Habilidades
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
@@ -329,10 +329,10 @@ export default function Resume() {
                           transition={{ duration: 0.3, delay: 0.1 * index }}
                           whileHover={{
                             scale: 1.1,
-                            backgroundColor: "rgba(74, 222, 128, 0.3)",
+                            backgroundColor: "rgba(29, 185, 84, 0.3)",
                             transition: { duration: 0.2 },
                           }}
-                          className="bg-green-400/10 text-green-400 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-green-400/20 shadow-[0_4px_10px_rgba(0,0,0,0.1)] cursor-default transition-all duration-300"
+                          className="bg-accent/10 text-accent px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-accent/20 shadow-[0_4px_10px_rgba(0,0,0,0.1)] cursor-default transition-all duration-300"
                         >
                           {skill}
                         </motion.span>
@@ -347,7 +347,7 @@ export default function Resume() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-green-400 drop-shadow-[0_2px_5px_rgba(74,222,128,0.2)]">
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(29,185,84,0.2)]">
                       Hobbies
                     </h4>
                     <ul className="flex flex-col gap-2 md:gap-4">
@@ -360,7 +360,7 @@ export default function Resume() {
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                           className="flex items-start gap-2 md:gap-3 group transition-all duration-300"
                         >
-                          <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-green-400 shadow-[0_0_5px_rgba(74,222,128,0.5)] group-hover:scale-125 transition-all duration-300"></span>
+                          <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-accent shadow-[0_0_5px_rgba(29,185,84,0.5)] group-hover:scale-125 transition-all duration-300"></span>
                           <p className="text-white/80 group-hover:text-white transition-colors duration-300 text-xs md:text-base">
                             {hobby}
                           </p>
@@ -375,15 +375,15 @@ export default function Resume() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="mt-4 md:mt-6 bg-gradient-to-r from-green-400/20 to-green-500/10 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+                  className="mt-4 md:mt-6 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                 >
                   <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-white drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]">
                     Resumo de Competências
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
-                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
-                        <BiCodeAlt className="text-xl md:text-2xl text-green-400" />
+                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
+                        <BiCodeAlt className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Front-end
@@ -394,8 +394,8 @@ export default function Resume() {
                     </div>
 
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
-                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
-                        <BiServer className="text-xl md:text-2xl text-green-400" />
+                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
+                        <BiServer className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Backend
@@ -406,8 +406,8 @@ export default function Resume() {
                     </div>
 
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
-                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
-                        <BiMobile className="text-xl md:text-2xl text-green-400" />
+                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
+                        <BiMobile className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Mobile
@@ -418,8 +418,8 @@ export default function Resume() {
                     </div>
 
                     <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
-                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-green-400/10 flex items-center justify-center mb-2 md:mb-3">
-                        <BiLaptop className="text-xl md:text-2xl text-green-400" />
+                      <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
+                        <BiLaptop className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Design Responsivo

@@ -1,7 +1,7 @@
 export const about = {
   title: "Sobre mim",
   description:
-    "Desenvolvedor Front-End e Mobile com foco em React, Vue.js, React Native, Next.js e TypeScript. Tenho experiência com CI/CD, testes automatizados e entrega de interfaces performáticas e escaláveis. Em projetos recentes, aumentei em 35% a produtividade com automações e reduzi em 40% o tempo de resposta em apps mobile. Busco oportunidades remotas em ambientes colaborativos com foco em código limpo e usabilidade.",
+    "Desenvolvedor Front-End e Mobile com foco em React, Next.js, Vue.js, Nuxt, Angular, React Native, Flutter e TypeScript. Tenho experiência com CI/CD, testes automatizados e entrega de interfaces performáticas e escaláveis. Em projetos recentes, aumentei em 35% a produtividade com automações e reduzi em 40% o tempo de resposta em apps mobile. Busco oportunidades remotas em ambientes colaborativos com foco em código limpo e usabilidade.",
   
   skills: [
     // Frontend Frameworks & Libraries

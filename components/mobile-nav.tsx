@@ -40,13 +40,15 @@ export function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <FiMenu className="text-3xl text-green-500" />
+        <span className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/10">
+          <FiMenu className="text-2xl text-accent" />
+        </span>
       </SheetTrigger>
-      <SheetContent className="flex flex-col bg-primary">
-        <div className="mt-32 mb-40 text-center text-2xl">
+      <SheetContent className="flex flex-col border-white/10 bg-primary text-white">
+        <div className="mt-28 mb-20 text-center text-2xl">
           <Link href="/">
-            <h1 className="text-4xl font-semibold text-green-500">
-              Luis Felipe G Silva<span className="text-green-500">.</span>
+            <h1 className="font-display text-4xl font-extrabold text-accent">
+              Luis Felipe<span className="text-white">.</span>
             </h1>
           </Link>
         </div>
@@ -57,7 +59,7 @@ export function MobileNav() {
                 <Link
                   key={index}
                   href={link.path}
-                  className={`${link.path === pathname && "text-green-500 border-b-2 border-green-500"} flex items-center justify-center gap-4 first-letter:text-xl capitalize hover:text-gray-500 transition-all`}
+                  className={`${link.path === pathname ? "bg-accent text-primary" : "text-white/70 hover:text-white"} flex w-full max-w-[260px] items-center justify-center gap-4 rounded-full px-5 py-3 text-lg font-semibold capitalize transition-all`}
                 >
                   {link.icon}
                   {link.name}

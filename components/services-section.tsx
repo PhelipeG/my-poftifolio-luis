@@ -3,27 +3,38 @@ import { services } from "@/data/services-data";
 
 export default function ServicesSection() {
   return (
-    <div className="mt-20 mb-12">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent inline-block mb-4">Serviços Oferecidos</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
-        <p className="text-white/60 mt-6 max-w-2xl mx-auto">{services[0].description}</p>
+    <section className="py-16">
+      <div className="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div>
+          <span className="font-mono text-xs uppercase tracking-[0.24em] text-accent">serviços</span>
+          <h2 className="mt-4 font-display text-4xl font-extrabold leading-none md:text-6xl">
+            Do protótipo ao deploy, com acabamento de produto.
+          </h2>
+        </div>
+        <p className="max-w-2xl text-lg leading-8 text-white/60 lg:ml-auto">
+          {services[0].description}
+        </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
         {services[0].serviceList.map((service, index) => (
           <div 
             key={index}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:border-green-400/30 transition-all duration-300 h-full flex flex-col hover:scale-105"
+            className="group flex min-h-[260px] flex-col justify-between rounded-lg border border-white/10 bg-white/[0.055] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.09]"
           >
-            <div className="bg-white/5 rounded-xl w-16 h-16 flex items-center justify-center mb-5">
-              <service.icon className="text-3xl text-green-400" />
+            <div className="flex items-start justify-between gap-4">
+              <div className="grid size-14 place-items-center rounded-lg bg-accent text-black transition-colors group-hover:bg-accent-hover">
+                <service.icon className="text-3xl" />
+              </div>
+              <span className="font-mono text-xs text-white/35">0{index + 1}</span>
             </div>
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-            <p className="text-white/60 text-sm flex-grow">{service.description}</p>
+            <div>
+              <h3 className="font-display text-2xl font-bold leading-tight">{service.title}</h3>
+              <p className="mt-4 text-sm leading-6 text-white/58">{service.description}</p>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

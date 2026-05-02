@@ -23,7 +23,9 @@ const config: Config = {
       "2xl": "1600px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrains-mono)", // Nome da variável corrigido
+      primary: "var(--font-sans)",
+      display: "var(--font-display)",
+      mono: "var(--font-jetbrains-mono)",
     },
     extend: {
       keyframes: {
@@ -51,10 +53,10 @@ const config: Config = {
         "fade-in": "fade-in 0.5s ease-out forwards",
       },
       colors: {
-        primary: '#1c1c22',
+        primary: '#000000',
         accent: {
-          DEFAULT: '#00ffff',
-          hover: '#8000ff',
+          DEFAULT: '#1DB954',
+          hover: '#1ed760',
         },
         background: 'var(--background)',
         foreground: 'var(--foreground)',
