@@ -40,14 +40,14 @@ export function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <span className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/10">
-          <FiMenu className="text-2xl text-accent" />
+        <span className="grid size-11 place-items-center rounded-2xl border-4 border-mario-brickDark bg-mario-question">
+          <FiMenu className="text-2xl text-mario-brickDark" />
         </span>
       </SheetTrigger>
-      <SheetContent className="flex flex-col border-white/10 bg-primary text-white">
+      <SheetContent className="flex flex-col border-mario-brickDark bg-mario-sky text-white">
         <div className="mt-28 mb-20 text-center text-2xl">
           <Link href="/">
-            <h1 className="font-display text-4xl font-extrabold text-accent">
+            <h1 className="font-display text-4xl font-extrabold text-mario-coin drop-shadow-[2px_2px_0_#7c3418]">
               Luis Felipe<span className="text-white">.</span>
             </h1>
           </Link>
@@ -59,7 +59,7 @@ export function MobileNav() {
                 <Link
                   key={index}
                   href={link.path}
-                  className={`${link.path === pathname ? "bg-accent text-primary" : "text-white/70 hover:text-white"} flex w-full max-w-[260px] items-center justify-center gap-4 rounded-full px-5 py-3 text-lg font-semibold capitalize transition-all`}
+                  className={`${link.path === pathname ? "bg-mario-red text-white" : "bg-mario-brick/80 text-white hover:bg-mario-question hover:text-mario-brickDark"} flex w-full max-w-[260px] items-center justify-center gap-4 rounded-2xl border-4 border-mario-brickDark px-5 py-3 text-lg font-semibold capitalize transition-all`}
                 >
                   {link.icon}
                   {link.name}

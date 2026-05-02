@@ -20,11 +20,11 @@ export default function Work() {
       <div className="mx-auto max-w-[1600px] px-6 lg:px-8">
         <section className="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
-              portfólio
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-mario-coin">
+              world select
             </p>
             <h1 className="mt-5 font-display text-6xl font-extrabold leading-[0.9] md:text-8xl">
-              Projetos com cara de produto real.
+              Projetos em modo plataforma.
             </h1>
           </div>
           <p className="max-w-2xl text-lg leading-8 text-white/62 lg:ml-auto">
@@ -42,7 +42,7 @@ export default function Work() {
           {filteredProjects.map((project, index) => (
             <article
               key={project.id}
-              className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] transition-colors hover:border-accent/70"
+              className="mario-panel pixel-corners group overflow-hidden transition-colors hover:border-mario-red"
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-white/[0.03]">
                 <Image
@@ -54,7 +54,7 @@ export default function Work() {
                   quality={78}
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/70 px-3 py-1 font-mono text-xs uppercase tracking-[0.16em] text-accent backdrop-blur">
+                <div className="absolute left-4 top-4 rounded-2xl border border-mario-shell/20 bg-primary/80 px-3 py-1 font-mono text-xs uppercase tracking-[0.16em] text-mario-yellow backdrop-blur">
                   {project.category}
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function Work() {
                       href={project.link}
                       target="_blank"
                       aria-label={`Abrir ${project.title}`}
-                      className="grid size-11 shrink-0 place-items-center rounded-full bg-accent text-black transition-colors hover:bg-accent-hover"
+                      className="grid size-11 shrink-0 place-items-center rounded-2xl bg-mario-red text-white transition-colors hover:bg-accent-hover"
                     >
                       <ExternalLink size={18} />
                     </Link>
@@ -85,7 +85,7 @@ export default function Work() {
                   {project.stack?.map((item) => (
                     <span
                       key={item.name}
-                      className="rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-white/72"
+                      className="rounded-full border border-mario-shell/15 px-3 py-1 text-xs font-medium text-white/72"
                     >
                       {item.name}
                     </span>
@@ -96,7 +96,7 @@ export default function Work() {
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-accent transition-colors hover:text-accent-hover"
+                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-mario-coin transition-colors hover:text-accent-hover"
                   >
                     <Github size={17} />
                     Ver repositório

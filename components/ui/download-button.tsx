@@ -7,7 +7,7 @@ export default function DownloadButton() {
       asChild
       variant="outline"
       size="lg"
-      className="flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-6 font-mono text-xs uppercase tracking-[0.18em] text-white backdrop-blur-sm transition-all duration-300 hover:border-accent/60 hover:bg-accent/10 hover:text-accent"
+      className="pixel-corners flex items-center gap-3 border-4 border-mario-brickDark bg-mario-brick px-8 py-6 font-mono text-xs uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-mario-question hover:text-mario-brickDark"
     >
       <a href="/pdf/LuisCV.pdf" download="Luis_Felipe_Guilhao_CV.pdf">
         <span>Baixar Currículo</span>

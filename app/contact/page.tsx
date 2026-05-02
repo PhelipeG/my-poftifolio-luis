@@ -7,11 +7,11 @@ export default function Contact() {
     <main className="min-h-[80vh] py-16">
       <div className="mx-auto grid max-w-[1600px] gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <section>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
-            contato
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-mario-coin">
+            player link
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-6xl font-extrabold leading-[0.9] md:text-8xl">
-            Vamos tirar sua ideia do rascunho.
+            Press start para um novo projeto.
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 text-white/62">
             Me chame para interfaces web, aplicativos mobile, melhorias de UI/UX,
@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="mailto:luisphelipe1000@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-black transition-colors hover:bg-accent-hover"
+              className="pixel-corners inline-flex items-center gap-2 bg-mario-red px-6 py-3 font-bold text-white transition-colors hover:bg-accent-hover"
             >
               <Mail size={18} />
               Enviar email
@@ -29,7 +29,7 @@ export default function Contact() {
             <Link
               href="https://www.linkedin.com/in/luis-felipe-silv/"
               target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-white/12 px-6 py-3 font-semibold text-white transition-colors hover:border-accent hover:text-accent"
+              className="pixel-corners inline-flex items-center gap-2 border-2 border-mario-shell/20 bg-mario-panel px-6 py-3 font-semibold text-white transition-colors hover:border-mario-red hover:text-mario-coin"
             >
               <Linkedin size={18} />
               Linkedin
@@ -41,14 +41,14 @@ export default function Contact() {
           {info.map((item) => (
             <div
               key={item.title}
-              className="rounded-lg border border-white/10 bg-white/[0.035] p-6"
+              className="mario-panel pixel-corners p-6"
             >
               <div className="flex items-start gap-5">
-                <div className="grid size-12 shrink-0 place-items-center rounded-full bg-accent text-black">
+                <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-mario-shell text-primary shadow-[inset_0_-4px_0_rgba(0,0,0,0.22)]">
                   <item.icon className="text-xl" />
                 </div>
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-mario-coin">
                     {item.title.replace(" :", "")}
                   </p>
                   <p className="mt-2 text-lg font-semibold text-white">
@@ -59,9 +59,9 @@ export default function Contact() {
             </div>
           ))}
 
-          <div className="rounded-lg border border-accent/20 bg-accent/10 p-6">
+          <div className="mario-panel pixel-corners p-6">
             <div className="flex items-start gap-5">
-              <MapPin className="mt-1 text-accent" />
+              <MapPin className="mt-1 text-mario-yellow" />
               <div>
                 <h2 className="font-display text-3xl font-bold">Remoto primeiro</h2>
                 <p className="mt-3 text-white/62">
@@ -76,7 +76,7 @@ export default function Contact() {
             <Link
               href="https://github.com/PhelipeG"
               target="_blank"
-              className="grid size-12 place-items-center rounded-full border border-white/12 text-white transition-colors hover:border-accent hover:text-accent"
+              className="grid size-12 place-items-center rounded-2xl border border-mario-shell/20 bg-mario-panel text-white transition-colors hover:border-mario-red hover:text-mario-coin"
               aria-label="GitHub"
             >
               <Github />
@@ -84,14 +84,14 @@ export default function Contact() {
             <Link
               href="https://www.linkedin.com/in/luis-felipe-silv/"
               target="_blank"
-              className="grid size-12 place-items-center rounded-full border border-white/12 text-white transition-colors hover:border-accent hover:text-accent"
+              className="grid size-12 place-items-center rounded-2xl border border-mario-shell/20 bg-mario-panel text-white transition-colors hover:border-mario-red hover:text-mario-coin"
               aria-label="LinkedIn"
             >
               <Linkedin />
             </Link>
             <Link
               href="mailto:luisphelipe1000@gmail.com"
-              className="grid size-12 place-items-center rounded-full border border-white/12 text-white transition-colors hover:border-accent hover:text-accent"
+              className="grid size-12 place-items-center rounded-2xl border border-mario-shell/20 bg-mario-panel text-white transition-colors hover:border-mario-red hover:text-mario-coin"
               aria-label="Email"
             >
               <Send />

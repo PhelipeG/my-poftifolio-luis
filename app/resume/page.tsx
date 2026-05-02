@@ -44,7 +44,7 @@ export default function Resume() {
   const borderVariants = {
     animate: {
       background: [
-        "linear-gradient(90deg, rgba(29,185,84,0) 0%, rgba(29,185,84,1) 50%, rgba(29,185,84,0) 100%)",
+        "linear-gradient(90deg, rgba(229,37,33,0) 0%, rgba(229,37,33,1) 50%, rgba(229,37,33,0) 100%)",
       ],
       backgroundSize: "200% 100%",
       backgroundPosition: ["100% 0%", "0% 0%", "100% 0%"],
@@ -103,7 +103,7 @@ export default function Resume() {
           transition={{ duration: 1 }}
           className="text-center mb-10 md:mb-16"
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-[0_5px_25px_rgba(29,185,84,0.2)]">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-[0_5px_25px_rgba(229,37,33,0.2)]">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">
               Meu Currículo
             </span>
@@ -124,7 +124,7 @@ export default function Resume() {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="mt-6 md:mt-8 flex items-center gap-2 px-6 py-3 mx-auto bg-gradient-to-r from-accent/80 to-accent-hover/80 rounded-full text-white font-medium shadow-[0_8px_20px_rgba(29,185,84,0.3)] hover:shadow-[0_8px_25px_rgba(29,185,84,0.5)] transition-all duration-300"
+            className="mt-6 md:mt-8 flex items-center gap-2 px-6 py-3 mx-auto bg-gradient-to-r from-accent/80 to-accent-hover/80 rounded-full text-white font-medium shadow-[0_8px_20px_rgba(229,37,33,0.3)] hover:shadow-[0_8px_25px_rgba(229,37,33,0.5)] transition-all duration-300"
           >
             <HiDownload className="text-xl" />
             <span>Download CV Completo</span>
@@ -144,7 +144,7 @@ export default function Resume() {
             <TabsList className="flex flex-col md:flex-row xl:flex-col w-full max-w-none xl:max-w-[380px] mx-auto xl:mx-0 gap-3 md:gap-4 xl:gap-6 p-2 md:p-4 xl:p-6 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)] mb-6 mt-6">
               <TabsTrigger
                 value="experience"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(229,37,33,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserTie className="text-lg md:text-xl text-accent" />
@@ -155,7 +155,7 @@ export default function Resume() {
               </TabsTrigger>
               <TabsTrigger
                 value="education"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(229,37,33,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserGraduate className="text-lg md:text-xl text-accent" />
@@ -166,7 +166,7 @@ export default function Resume() {
               </TabsTrigger>
               <TabsTrigger
                 value="about"
-                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(29,185,84,0.2)]"
+                className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(229,37,33,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaCode className="text-lg md:text-xl text-accent" />
@@ -198,7 +198,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(29,185,84,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)]"
                 >
                   {education.title}
                 </motion.h3>
@@ -256,7 +256,7 @@ export default function Resume() {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.2 * index, duration: 0.5 }}
-                          className="text-accent font-semibold bg-accent/10 px-4 md:px-5 py-1.5 rounded-full text-xs md:text-sm shadow-[0_4px_10px_rgba(29,185,84,0.2)]"
+                          className="text-accent font-semibold bg-accent/10 px-4 md:px-5 py-1.5 rounded-full text-xs md:text-sm shadow-[0_4px_10px_rgba(229,37,33,0.2)]"
                         >
                           {item.duration}
                         </motion.span>
@@ -276,7 +276,7 @@ export default function Resume() {
                           transition={{ delay: 0.4 * index, duration: 0.5 }}
                           className="flex items-center gap-2 md:gap-3 mt-1 md:mt-2"
                         >
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_5px_rgba(29,185,84,0.5)]"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_5px_rgba(229,37,33,0.5)]"></span>
                           <p className="text-white/70 text-xs md:text-base">
                             {item.institution}
                           </p>
@@ -295,7 +295,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(29,185,84,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)]"
                 >
                   {about.title}
                 </motion.h3>
@@ -317,7 +317,7 @@ export default function Resume() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(29,185,84,0.2)]">
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(229,37,33,0.2)]">
                       Habilidades
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
@@ -329,7 +329,7 @@ export default function Resume() {
                           transition={{ duration: 0.3, delay: 0.1 * index }}
                           whileHover={{
                             scale: 1.1,
-                            backgroundColor: "rgba(29, 185, 84, 0.3)",
+                            backgroundColor: "rgba(111, 92, 194, 0.3)",
                             transition: { duration: 0.2 },
                           }}
                           className="bg-accent/10 text-accent px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-accent/20 shadow-[0_4px_10px_rgba(0,0,0,0.1)] cursor-default transition-all duration-300"
@@ -347,7 +347,7 @@ export default function Resume() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
                   >
-                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(29,185,84,0.2)]">
+                    <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(229,37,33,0.2)]">
                       Hobbies
                     </h4>
                     <ul className="flex flex-col gap-2 md:gap-4">
@@ -360,7 +360,7 @@ export default function Resume() {
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                           className="flex items-start gap-2 md:gap-3 group transition-all duration-300"
                         >
-                          <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-accent shadow-[0_0_5px_rgba(29,185,84,0.5)] group-hover:scale-125 transition-all duration-300"></span>
+                          <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-accent shadow-[0_0_5px_rgba(229,37,33,0.5)] group-hover:scale-125 transition-all duration-300"></span>
                           <p className="text-white/80 group-hover:text-white transition-colors duration-300 text-xs md:text-base">
                             {hobby}
                           </p>

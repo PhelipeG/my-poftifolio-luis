@@ -20,8 +20,8 @@ const ProjectFilter = ({ selectedCategory, onCategoryChange }: ProjectFilterProp
           onClick={() => onCategoryChange(option.value)}
           className={`rounded-full border px-6 py-3 text-sm font-bold transition-all duration-300 ${
             selectedCategory === option.value
-              ? "border-accent bg-accent text-black"
-              : "border-white/15 bg-transparent text-white/70 hover:border-accent hover:text-accent"
+              ? "border-mario-red bg-mario-red text-white"
+              : "border-mario-shell/20 bg-mario-panel text-white/70 hover:border-mario-red hover:text-mario-coin"
           }`}
         >
           {option.label}

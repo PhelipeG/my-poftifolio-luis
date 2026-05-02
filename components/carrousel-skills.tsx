@@ -2,11 +2,11 @@ import { skills } from "../data/skills-data";
 
 export default function CarrouselSkills() {
   return (
-    <section className="border-y border-accent/20 bg-black py-14 text-white">
+    <section className="border-y-4 border-mario-brickDark bg-mario-sky py-14 text-white">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="font-mono text-xs uppercase tracking-[0.24em] text-accent">tecnologias</span>
+            <span className="font-mono text-xs uppercase tracking-[0.24em] text-mario-coin">choose your power-up</span>
             <h2 className="mt-3 font-display text-4xl font-extrabold md:text-6xl">Stack de trabalho</h2>
           </div>
           <p className="max-w-xl text-white/60">
@@ -19,10 +19,10 @@ export default function CarrouselSkills() {
             {skill.skillList.map((skill, index) => (
               <div
                 key={index}
-                className="group flex min-h-[116px] flex-col justify-between rounded-lg border border-white/10 bg-white/[0.035] p-4 transition-all hover:-translate-y-1 hover:border-accent hover:bg-accent"
+                className="mario-panel pixel-corners group flex min-h-[116px] flex-col justify-between p-4 transition-all hover:-translate-y-1 hover:border-mario-red"
               >
-                <skill.icon className="text-4xl text-white/80 transition-transform group-hover:scale-110 group-hover:text-black" />
-                <h3 className="font-display text-lg font-bold leading-tight group-hover:text-black">{skill.name}</h3>
+                <skill.icon className="text-4xl text-mario-coin transition-transform group-hover:scale-110 group-hover:text-mario-yellow" />
+                <h3 className="font-display text-lg font-bold leading-tight">{skill.name}</h3>
               </div>
             ))}
           </div>

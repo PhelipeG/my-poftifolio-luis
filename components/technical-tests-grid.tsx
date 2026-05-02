@@ -30,9 +30,9 @@ const TechnicalTestsGrid = () => {
     <div className="max-w-[1800px] mx-auto px-4 lg:px-6 xl:px-8">
       {/* Informação sobre Backend */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-lg">
-          <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-          <p className="text-accent text-sm font-medium">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-mario-red/10 border border-mario-red/20 rounded-lg">
+          <div className="w-2 h-2 bg-mario-red rounded-full animate-pulse"></div>
+          <p className="text-mario-coin text-sm font-medium">
             O código backend dos projetos fullstack está disponível no card do projeto
           </p>
         </div>

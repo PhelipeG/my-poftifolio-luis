@@ -53,10 +53,27 @@ const config: Config = {
         "fade-in": "fade-in 0.5s ease-out forwards",
       },
       colors: {
-        primary: '#000000',
+        primary: '#5c94fc',
         accent: {
-          DEFAULT: '#1DB954',
-          hover: '#1ed760',
+          DEFAULT: '#e52521',
+          hover: '#ff3b30',
+        },
+        mario: {
+          sky: '#5c94fc',
+          cloud: '#f8f8f8',
+          brick: '#b85a24',
+          brickDark: '#7c3418',
+          question: '#fbd000',
+          coin: '#f7d51d',
+          red: '#e52521',
+          blue: '#049cd8',
+          green: '#43b047',
+          pipe: '#2fa346',
+          ground: '#8b4513',
+          panel: '#2b1b14',
+          shell: '#f8f8f8',
+          violet: '#3d2f8f',
+          yellow: '#fbd000',
         },
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -68,7 +85,6 @@ const config: Config = {
       },
     },
   },
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 };
 

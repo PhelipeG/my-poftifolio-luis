@@ -12,18 +12,18 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Frontend':
-        return 'bg-accent/15 text-accent border-accent/30';
+        return 'bg-mario-blue/15 text-mario-blue border-mario-blue/30';
       case 'Backend':
-        return 'bg-accent/15 text-accent border-accent/30';
+        return 'bg-mario-green/15 text-mario-green border-mario-green/30';
       case 'Mobile':
-        return 'bg-accent/15 text-accent border-accent/30';
+        return 'bg-mario-red/15 text-mario-coin border-mario-red/30';
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
 
   return (
-    <Card className="bg-white/5 border-white/10 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group overflow-hidden w-full h-full min-h-[800px] flex flex-col">
+    <Card className="mario-panel pixel-corners group flex h-full min-h-[800px] w-full flex-col overflow-hidden transition-all duration-300 hover:border-mario-red">
       {/* Imagem */}
       <div className="relative h-72 lg:h-80 xl:h-72 overflow-hidden flex-shrink-0">
         <Image
@@ -41,14 +41,14 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
         </div>
         
         {/* Status */}
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent/15 text-accent border border-accent/30 text-xs font-medium">
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-mario-yellow/15 text-mario-yellow border border-mario-yellow/30 text-xs font-medium">
           {test.status}
         </div>
       </div>
 
       <div className="flex flex-col flex-grow">
         <CardHeader className="pb-3 flex-shrink-0">
-          <CardTitle className="text-white group-hover:text-accent transition-colors text-xl lg:text-2xl">
+          <CardTitle className="text-white group-hover:text-mario-coin transition-colors text-xl lg:text-2xl">
             {test.title}
           </CardTitle>
           <CardDescription className="text-white/70 text-base lg:text-lg leading-relaxed">
@@ -61,7 +61,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
             {/* Informações da vaga */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm lg:text-base text-white/80">
-                <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-accent flex-shrink-0" />
+                <MapPin className="h-4 w-4 lg:h-5 lg:w-5 text-mario-coin flex-shrink-0" />
                 <span className="font-medium">{test.position}</span>
               </div>
             </div>
@@ -73,7 +73,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                 {test.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-2 text-xs lg:text-sm bg-white/10 text-white/90 rounded-md border border-white/20 hover:border-accent/50 hover:bg-white/15 transition-all duration-200 font-medium"
+                    className="px-3 py-2 text-xs lg:text-sm bg-white/10 text-white/90 rounded-md border border-mario-shell/20 hover:border-mario-red hover:bg-white/15 transition-all duration-200 font-medium"
                   >
                     {tech}
                   </span>
@@ -90,7 +90,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                   href={test.repositoryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-3 bg-white/10 hover:bg-accent/20 text-white hover:text-accent rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
+                  className="flex items-center gap-2 px-4 py-3 bg-white/10 hover:bg-mario-red/20 text-white hover:text-mario-coin rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
                 >
                   <Github className="h-4 w-4 lg:h-5 lg:w-5" />
                   {test.category === "Frontend" ? "Código Frontend" : "Código"}
@@ -101,7 +101,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                   href={test.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-3 bg-accent/20 hover:bg-accent text-white hover:text-primary rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
+                  className="flex items-center gap-2 px-4 py-3 bg-mario-red/20 hover:bg-mario-red text-white rounded-lg transition-all duration-300 text-sm lg:text-base font-medium flex-1 justify-center"
                 >
                   <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
                   Demo
@@ -113,7 +113,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
                 href={test.backendRepositoryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 bg-accent/15 hover:bg-accent/25 text-accent rounded-lg transition-all duration-300 text-sm lg:text-base font-medium justify-center border border-accent/30"
+                className="flex items-center gap-2 px-4 py-3 bg-mario-green/15 hover:bg-mario-green/25 text-mario-green rounded-lg transition-all duration-300 text-sm lg:text-base font-medium justify-center border border-mario-green/30"
               >
                 <Github className="h-4 w-4 lg:h-5 lg:w-5" />
                 Código Backend

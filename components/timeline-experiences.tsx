@@ -29,7 +29,7 @@ export default function Timeline() {
             transition={{ delay: index * 0.12, ease: "easeOut", duration: 0.55 }}
             className="relative rounded-lg border border-white/10 bg-white/[0.055] p-5 md:ml-12 md:p-7"
           >
-            <div className="absolute -left-[39px] top-8 hidden size-3 rounded-full bg-accent shadow-[0_0_0_8px_rgba(29,185,84,0.12)] md:block" />
+            <div className="absolute -left-[39px] top-8 hidden size-3 rounded-full bg-accent shadow-[0_0_0_8px_rgba(229,37,33,0.12)] md:block" />
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{item.date}</p>

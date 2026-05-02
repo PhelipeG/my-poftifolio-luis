@@ -13,7 +13,7 @@ const TechnicalTestsPage = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="h1 mb-4">
-            Testes <span className="text-accent">Técnicos</span>
+            Testes <span className="text-mario-coin">Técnicos</span>
           </h1>
           <p className="text-white/70 text-lg max-w-4xl mx-auto leading-relaxed">
             Uma coleção dos testes técnicos que desenvolvi para diferentes empresas e posições. 

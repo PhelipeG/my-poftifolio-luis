@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description: "Este é o meu portfólio onde você pode encontrar meus projetos e informações sobre mim.",
   authors: [{ name: "Luis Felipe G Silva" }],
   icons: {
-    icon: "/icon.svg",
+    icon: "/mario-icon.svg",
   },
 };
 

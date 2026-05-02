@@ -5,12 +5,12 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-    --ink: #000000;
-    --paper: #050505;
-    --acid: #1DB954;
-    --aqua: #1ed760;
-    --coral: #ffffff;
-    --steel: #9ca3af;
+    --ink: #20110b;
+    --paper: #5c94fc;
+    --acid: #e52521;
+    --aqua: #049cd8;
+    --coral: #fbd000;
+    --steel: #f8f8f8;
   }
 
   html {
@@ -19,7 +19,10 @@
 
   body {
     @apply font-primary bg-primary text-white leading-relaxed;
-    background: #000000;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(248, 248, 248, 0.32), transparent 7rem),
+      radial-gradient(circle at 82% 18%, rgba(248, 248, 248, 0.22), transparent 9rem),
+      linear-gradient(180deg, #5c94fc 0%, #4b80dc 52%, #2f6bc5 100%);
     min-height: 100vh;
   }
 
@@ -30,10 +33,11 @@
     pointer-events: none;
     z-index: -1;
     background:
-      linear-gradient(rgba(29, 185, 84, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(29, 185, 84, 0.08) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 72%);
+      linear-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+    background-size: 40px 40px;
+    image-rendering: pixelated;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 80%);
   }
 
   .h1 {
@@ -50,7 +54,7 @@
   }
   
   .text-outline-hover {
-    -webkit-text-stroke: 1px #1DB954;
+    -webkit-text-stroke: 1px #fbd000;
   }
 }
 
@@ -68,7 +72,36 @@
 
   .texture-panel {
     background:
-      linear-gradient(135deg, rgba(29, 185, 84, 0.16), rgba(255, 255, 255, 0.035));
-    border: 1px solid rgba(29, 185, 84, 0.22);
+      linear-gradient(180deg, rgba(251, 208, 0, 0.9), rgba(222, 153, 0, 0.9));
+    border: 3px solid rgba(124, 52, 24, 0.78);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .mario-panel {
+    background:
+      linear-gradient(180deg, rgba(184, 90, 36, 0.92), rgba(124, 52, 24, 0.92)),
+      #b85a24;
+    border: 3px solid rgba(90, 39, 18, 0.95);
+    box-shadow:
+      inset 0 3px 0 rgba(255, 255, 255, 0.08),
+      inset 0 -5px 0 rgba(0, 0, 0, 0.24),
+      0 24px 70px rgba(32, 17, 11, 0.22);
+  }
+
+  .pixel-corners {
+    clip-path: polygon(
+      0 12px,
+      12px 12px,
+      12px 0,
+      calc(100% - 12px) 0,
+      calc(100% - 12px) 12px,
+      100% 12px,
+      100% calc(100% - 12px),
+      calc(100% - 12px) calc(100% - 12px),
+      calc(100% - 12px) 100%,
+      12px 100%,
+      12px calc(100% - 12px),
+      0 calc(100% - 12px)
+    );
   }
 }
