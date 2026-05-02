@@ -104,4 +104,32 @@
       0 calc(100% - 12px)
     );
   }
+
+  .mario-coin-orbit {
+    animation: mario-coin-orbit 13s linear infinite;
+    transform-origin: center;
+  }
+
+  .mario-coin-spin {
+    animation: mario-coin-spin 680ms steps(4, end) infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+}
+
+@keyframes mario-coin-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mario-coin-spin {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scaleX(0.22);
+  }
 }

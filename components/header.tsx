@@ -16,7 +16,6 @@ export function Header() {
             </span>
             <div className="leading-none">
               <p className="font-display text-xl font-extrabold tracking-normal drop-shadow-[2px_2px_0_#7c3418]">Luis Felipe</p>
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-mario-coin drop-shadow-[1px_1px_0_#7c3418]">Super Mario portfolio</p>
             </div>
           </div>
         </Link>

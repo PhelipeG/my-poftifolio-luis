@@ -1,9 +1,23 @@
 
 import { services } from "@/data/services-data";
 
+function PipeDecoration() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute -right-2 bottom-0 hidden translate-x-1/4 translate-y-1/4 select-none lg:block"
+    >
+      <div className="relative h-24 w-20 rounded-t-[1.4rem] border-[5px] border-mario-brickDark bg-mario-pipe shadow-[inset_8px_0_0_rgba(255,255,255,0.12),0_18px_32px_rgba(32,17,11,0.18)]">
+        <div className="absolute -top-4 left-1/2 h-6 w-28 -translate-x-1/2 rounded-xl border-[5px] border-mario-brickDark bg-mario-green shadow-[inset_0_-4px_0_rgba(0,0,0,0.16)]" />
+      </div>
+    </div>
+  );
+}
+
 export default function ServicesSection() {
   return (
-    <section className="py-16">
+    <section className="relative py-16">
+      <PipeDecoration />
       <div className="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <div>
           <span className="font-mono text-xs uppercase tracking-[0.24em] text-mario-coin">power-ups</span>

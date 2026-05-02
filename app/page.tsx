@@ -6,6 +6,19 @@ import DownloadButton from "@/components/ui/download-button";
 import ContactButton from "@/components/ui/contact-button";
 import { Cpu, Gamepad2, Layers3, Smartphone } from "lucide-react";
 
+function PipeDecoration({ className = "" }: { className?: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`hidden select-none pointer-events-none lg:block ${className}`}
+    >
+      <div className="relative h-28 w-24 rounded-t-[1.5rem] border-[5px] border-mario-brickDark bg-mario-pipe shadow-[inset_8px_0_0_rgba(255,255,255,0.12),0_18px_32px_rgba(32,17,11,0.18)]">
+        <div className="absolute -top-4 left-1/2 h-6 w-32 -translate-x-1/2 rounded-xl border-[5px] border-mario-brickDark bg-mario-green shadow-[inset_0_-4px_0_rgba(0,0,0,0.16)]" />
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const highlights = [
     { value: "20+", label: "fases entregues" },
@@ -63,7 +76,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="grid gap-4 py-8 md:grid-cols-4">
+        <section className="grid gap-4 py-8 pb-16 md:grid-cols-4">
           {highlights.map((item) => (
             <div key={item.label} className="texture-panel pixel-corners p-5">
               <div className="font-display text-4xl font-extrabold text-mario-brickDark">{item.value}</div>
