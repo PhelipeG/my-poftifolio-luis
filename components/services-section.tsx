@@ -25,7 +25,7 @@ export default function ServicesSection() {
             Do protótipo ao deploy, com acabamento de produto.
           </h2>
         </div>
-        <p className="max-w-2xl text-lg leading-8 text-white/60 lg:ml-auto">
+        <p className="max-w-2xl text-lg leading-8 text-[#4f5b70] dark:text-white/75 lg:ml-auto">
           {services[0].description}
         </p>
       </div>
@@ -40,11 +40,11 @@ export default function ServicesSection() {
               <div className="grid size-14 place-items-center rounded-2xl border-4 border-mario-brickDark bg-mario-question text-mario-brickDark shadow-[inset_0_-4px_0_rgba(0,0,0,0.22)] transition-colors group-hover:bg-mario-red group-hover:text-white">
                 <service.icon className="text-3xl" />
               </div>
-              <span className="font-mono text-xs text-white/35">0{index + 1}</span>
+              <span className="font-mono text-xs text-[#6a7489] dark:text-white/45">0{index + 1}</span>
             </div>
             <div>
               <h3 className="font-display text-2xl font-bold leading-tight">{service.title}</h3>
-              <p className="mt-4 text-sm leading-6 text-white/58">{service.description}</p>
+              <p className="mt-4 text-sm leading-6 text-[#4f5b70] dark:text-white/72">{service.description}</p>
             </div>
           </div>
         ))}

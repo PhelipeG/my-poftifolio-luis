@@ -21,7 +21,7 @@ const ProjectFilter = ({ selectedCategory, onCategoryChange }: ProjectFilterProp
           className={`rounded-full border px-6 py-3 text-sm font-bold transition-all duration-300 ${
             selectedCategory === option.value
               ? "border-mario-red bg-mario-red text-white"
-              : "border-mario-shell/20 bg-mario-panel text-white/70 hover:border-mario-red hover:text-mario-coin"
+              : "border-[#d7deea] bg-white text-[#111318] hover:border-mario-red hover:text-mario-red dark:border-white/15 dark:bg-[#1b0505] dark:text-white/75 dark:hover:border-mario-coin dark:hover:text-mario-coin"
           }`}
         >
           {option.label}

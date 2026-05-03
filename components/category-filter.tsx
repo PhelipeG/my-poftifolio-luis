@@ -17,7 +17,7 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange }: CategoryFilterPr
           className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 border ${
             selectedCategory === option.value
               ? "bg-mario-red text-white border-mario-red shadow-lg scale-105"
-              : "bg-mario-panel text-white border-mario-shell/20 hover:border-mario-red hover:text-mario-coin hover:scale-105"
+              : "bg-white text-[#111318] border-[#d7deea] hover:border-mario-red hover:text-mario-red hover:scale-105 dark:bg-[#1b0505] dark:text-white dark:border-white/15 dark:hover:border-mario-coin dark:hover:text-mario-coin"
           }`}
         >
           {option.label}

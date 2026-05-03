@@ -30,9 +30,9 @@ const TechnicalTestsGrid = () => {
     <div className="max-w-[1800px] mx-auto px-4 lg:px-6 xl:px-8">
       {/* Informação sobre Backend */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-mario-red/10 border border-mario-red/20 rounded-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-mario-red/10 border border-mario-red/25 rounded-lg dark:bg-mario-red/10 dark:border-mario-red/20">
           <div className="w-2 h-2 bg-mario-red rounded-full animate-pulse"></div>
-          <p className="text-mario-coin text-sm font-medium">
+          <p className="text-mario-red text-sm font-medium dark:text-mario-coin">
             O código backend dos projetos fullstack está disponível no card do projeto
           </p>
         </div>
@@ -46,7 +46,7 @@ const TechnicalTestsGrid = () => {
 
       {/* Estatísticas */}
       <div className="text-center mb-8">
-        <p className="text-white/70 text-sm">
+        <p className="text-[#4f5b70] dark:text-white/70 text-sm">
           {getStatsText()}
         </p>
       </div>
@@ -68,10 +68,10 @@ const TechnicalTestsGrid = () => {
         </div>
       ) : (
         <div className="text-center py-12">
-          <div className="text-white/50 text-lg mb-2">
+          <div className="text-[#4f5b70] dark:text-white/50 text-lg mb-2">
             Nenhum teste técnico encontrado
           </div>
-          <p className="text-white/30 text-sm">
+          <p className="text-[#6a7489] dark:text-white/30 text-sm">
             Tente selecionar uma categoria diferente
           </p>
         </div>

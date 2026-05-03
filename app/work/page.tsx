@@ -16,7 +16,7 @@ export default function Work() {
       : projectsData.filter((project) => project.category === activeFilter);
 
   return (
-    <main className="min-h-[80vh] py-16">
+    <main className="min-h-[80vh] py-16 text-[#111318] dark:text-white">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-8">
         <section className="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
@@ -27,7 +27,7 @@ export default function Work() {
               Projetos em modo plataforma.
             </h1>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-white/62 lg:ml-auto">
+          <p className="max-w-2xl text-lg leading-8 text-[#4f5b70] dark:text-white/70 lg:ml-auto">
             Web apps, mobile apps e interfaces completas usando React, Next.js,
             Vue, Nuxt, Angular, React Native e Flutter.
           </p>
@@ -62,10 +62,10 @@ export default function Work() {
               <div className="p-6 lg:p-7">
                 <div className="flex items-start justify-between gap-6">
                   <div>
-                    <h2 className="font-display text-3xl font-bold leading-none text-white">
+                    <h2 className="font-display text-3xl font-bold leading-none text-[#111318] dark:text-white">
                       {project.title}
                     </h2>
-                    <p className="mt-4 text-sm leading-6 text-white/62">
+                    <p className="mt-4 text-sm leading-6 text-[#4f5b70] dark:text-white/70">
                       {project.description}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ export default function Work() {
                   {project.stack?.map((item) => (
                     <span
                       key={item.name}
-                      className="rounded-full border border-mario-shell/15 px-3 py-1 text-xs font-medium text-white/72"
+                      className="rounded-full border border-[#d7deea] px-3 py-1 text-xs font-medium text-[#4f5b70] dark:border-white/15 dark:text-white/75"
                     >
                       {item.name}
                     </span>

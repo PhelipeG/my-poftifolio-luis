@@ -64,7 +64,7 @@ export default function Resume() {
         opacity: 1,
         transition: { duration: 0.8, ease: "easeOut" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-8 md:py-12 xl:py-6 relative"
+      className="min-h-[80vh] flex items-center justify-center py-8 md:py-12 xl:py-6 relative text-[#111318] dark:text-white"
     >
       {/* Elementos decorativos flutuantes */}
       <motion.div
@@ -104,11 +104,11 @@ export default function Resume() {
           className="text-center mb-10 md:mb-16"
         >
           <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-[0_5px_25px_rgba(229,37,33,0.2)]">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#111318] dark:to-white">
               Meu Currículo
             </span>
           </h1>
-          <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg px-2 md:px-0">
+          <p className="text-[#4f5b70] dark:text-white/70 max-w-2xl mx-auto text-base md:text-lg px-2 md:px-0">
             Minha trajetória profissional, formação acadêmica e habilidades
             técnicas que me definem como desenvolvedor.
           </p>
@@ -141,14 +141,14 @@ export default function Resume() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full xl:w-auto xl:sticky xl:top-24 h-max"
           >
-            <TabsList className="flex flex-col md:flex-row xl:flex-col w-full max-w-none xl:max-w-[380px] mx-auto xl:mx-0 gap-3 md:gap-4 xl:gap-6 p-2 md:p-4 xl:p-6 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)] mb-6 mt-6">
+            <TabsList className="flex flex-col md:flex-row xl:flex-col w-full max-w-none xl:max-w-[380px] mx-auto xl:mx-0 gap-3 md:gap-4 xl:gap-6 p-2 md:p-4 xl:p-6 rounded-2xl md:rounded-3xl bg-white backdrop-blur-sm border border-[#d7deea] shadow-[0_8px_30px_rgba(41,54,78,0.1)] mb-6 mt-6 dark:bg-white/5 dark:border-white/10">
               <TabsTrigger
                 value="experience"
                 className="relative overflow-hidden group rounded-xl py-3 md:py-5 px-4 md:px-6 min-w-[120px] transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-accent/20 data-[state=active]:to-accent/10 data-[state=active]:backdrop-blur-sm data-[state=active]:border-0 data-[state=active]:shadow-[0_4px_15px_rgba(229,37,33,0.2)]"
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserTie className="text-lg md:text-xl text-accent" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                  <span className="data-[state=active]:text-accent data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap dark:data-[state=active]:text-white">
                     Experiência
                   </span>
                 </div>
@@ -159,7 +159,7 @@ export default function Resume() {
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaUserGraduate className="text-lg md:text-xl text-accent" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                  <span className="data-[state=active]:text-accent data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap dark:data-[state=active]:text-white">
                     Educação
                   </span>
                 </div>
@@ -170,7 +170,7 @@ export default function Resume() {
               >
                 <div className="flex items-center gap-2 md:gap-3">
                   <FaCode className="text-lg md:text-xl text-accent" />
-                  <span className="data-[state=active]:text-white data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap">
+                  <span className="data-[state=active]:text-accent data-[state=active]:font-medium text-base md:text-lg whitespace-nowrap dark:data-[state=active]:text-white">
                     Sobre mim
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export default function Resume() {
             </TabsList>
           </motion.div>
 
-          <div className="min-h-[60vh] w-full bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3 md:p-8">
+          <div className="min-h-[60vh] w-full bg-white backdrop-blur-sm rounded-3xl border border-[#d7deea] shadow-[0_8px_30px_rgba(41,54,78,0.1)] p-3 md:p-8 dark:bg-white/5 dark:border-white/10">
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-6 md:gap-[30px] text-center xl:text-left">
@@ -198,7 +198,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#111318] drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)] dark:to-white"
                 >
                   {education.title}
                 </motion.h3>
@@ -207,7 +207,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-white/60 mx-auto xl:mx-0 text-base md:text-lg"
+                  className="text-[#4f5b70] dark:text-white/70 mx-auto xl:mx-0 text-base md:text-lg"
                 >
                   {education.description}
                 </motion.p>
@@ -224,7 +224,7 @@ export default function Resume() {
                         scale: 1.03,
                         transition: { duration: 0.2 },
                       }}
-                      className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl overflow-hidden flex flex-col justify-center p-4 md:p-6 h-full shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+                      className="relative bg-white backdrop-blur-sm rounded-xl overflow-hidden flex flex-col justify-center p-4 md:p-6 h-full border border-[#d7deea] shadow-[0_10px_30px_rgba(41,54,78,0.08)] dark:border-white/10 dark:bg-gradient-to-br dark:from-white/10 dark:to-white/5"
                     >
                       {/* Bordas animadas */}
                       <motion.span
@@ -265,7 +265,7 @@ export default function Resume() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 * index, duration: 0.5 }}
-                          className="text-base md:text-xl text-center font-bold text-white drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]"
+                          className="text-base md:text-xl text-center font-bold text-[#111318] dark:text-white dark:drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]"
                         >
                           {item.course}
                         </motion.h3>
@@ -277,7 +277,7 @@ export default function Resume() {
                           className="flex items-center gap-2 md:gap-3 mt-1 md:mt-2"
                         >
                           <span className="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_5px_rgba(229,37,33,0.5)]"></span>
-                          <p className="text-white/70 text-xs md:text-base">
+                          <p className="text-[#4f5b70] dark:text-white/70 text-xs md:text-base">
                             {item.institution}
                           </p>
                         </motion.div>
@@ -295,7 +295,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-white drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)]"
+                  className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-[#111318] drop-shadow-[0_5px_15px_rgba(229,37,33,0.2)] dark:to-white"
                 >
                   {about.title}
                 </motion.h3>
@@ -304,7 +304,7 @@ export default function Resume() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-white/70 mx-auto xl:mx-0 leading-relaxed text-base md:text-lg"
+                  className="text-[#4f5b70] dark:text-white/70 mx-auto xl:mx-0 leading-relaxed text-base md:text-lg"
                 >
                   {about.description}
                 </motion.p>
@@ -315,7 +315,7 @@ export default function Resume() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+                    className="bg-white backdrop-blur-sm rounded-xl p-4 md:p-8 border border-[#d7deea] shadow-[0_10px_30px_rgba(41,54,78,0.08)] dark:bg-gradient-to-br dark:from-white/10 dark:to-white/5 dark:border-white/10"
                   >
                     <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(229,37,33,0.2)]">
                       Habilidades
@@ -345,7 +345,7 @@ export default function Resume() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+                    className="bg-white backdrop-blur-sm rounded-xl p-4 md:p-8 border border-[#d7deea] shadow-[0_10px_30px_rgba(41,54,78,0.08)] dark:bg-gradient-to-br dark:from-white/10 dark:to-white/5 dark:border-white/10"
                   >
                     <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-accent drop-shadow-[0_2px_5px_rgba(229,37,33,0.2)]">
                       Hobbies
@@ -361,7 +361,7 @@ export default function Resume() {
                           className="flex items-start gap-2 md:gap-3 group transition-all duration-300"
                         >
                           <span className="min-w-[8px] h-[8px] mt-2 rounded-full bg-accent shadow-[0_0_5px_rgba(229,37,33,0.5)] group-hover:scale-125 transition-all duration-300"></span>
-                          <p className="text-white/80 group-hover:text-white transition-colors duration-300 text-xs md:text-base">
+                          <p className="text-[#4f5b70] group-hover:text-[#111318] transition-colors duration-300 text-xs md:text-base dark:text-white/80 dark:group-hover:text-white">
                             {hobby}
                           </p>
                         </motion.li>
@@ -375,56 +375,56 @@ export default function Resume() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="mt-4 md:mt-6 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm rounded-xl p-4 md:p-8 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+                  className="mt-4 md:mt-6 bg-white backdrop-blur-sm rounded-xl p-4 md:p-8 border border-[#d7deea] shadow-[0_10px_30px_rgba(41,54,78,0.08)] dark:bg-gradient-to-r dark:from-accent/20 dark:to-accent/10 dark:border-white/10"
                 >
-                  <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-white drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]">
+                  <h4 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-[#111318] dark:text-white dark:drop-shadow-[0_2px_5px_rgba(255,255,255,0.2)]">
                     Resumo de Competências
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-                    <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
+                    <div className="flex flex-col items-center p-3 md:p-4 bg-[#f3f5f8] rounded-xl dark:bg-white/5">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiCodeAlt className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Front-end
                       </h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">
+                      <p className="text-[#4f5b70] dark:text-white/60 text-xs md:text-sm text-center">
                         Criação de interfaces web responsivas e modernas
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
+                    <div className="flex flex-col items-center p-3 md:p-4 bg-[#f3f5f8] rounded-xl dark:bg-white/5">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiServer className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Backend
                       </h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">
+                      <p className="text-[#4f5b70] dark:text-white/60 text-xs md:text-sm text-center">
                         APIs robustas e serviços escaláveis
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
+                    <div className="flex flex-col items-center p-3 md:p-4 bg-[#f3f5f8] rounded-xl dark:bg-white/5">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiMobile className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Desenvolvimento Mobile
                       </h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">
+                      <p className="text-[#4f5b70] dark:text-white/60 text-xs md:text-sm text-center">
                         Aplicativos nativos e multiplataforma
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-center p-3 md:p-4 bg-white/5 rounded-xl">
+                    <div className="flex flex-col items-center p-3 md:p-4 bg-[#f3f5f8] rounded-xl dark:bg-white/5">
                       <div className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
                         <BiLaptop className="text-xl md:text-2xl text-accent" />
                       </div>
                       <h5 className="text-base md:text-lg font-medium mb-1">
                         Design Responsivo
                       </h5>
-                      <p className="text-white/60 text-xs md:text-sm text-center">
+                      <p className="text-[#4f5b70] dark:text-white/60 text-xs md:text-sm text-center">
                         Interfaces adaptadas para todos os dispositivos
                       </p>
                     </div>

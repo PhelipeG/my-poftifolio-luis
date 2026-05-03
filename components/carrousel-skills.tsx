@@ -2,14 +2,14 @@ import { skills } from "../data/skills-data";
 
 export default function CarrouselSkills() {
   return (
-    <section className="border-y-4 border-mario-brickDark bg-mario-sky py-14 text-white">
+    <section className="border-y-4 border-mario-brickDark bg-[#edf3fb] py-14 text-[#111318] dark:border-[#671010] dark:bg-[#0d0303] dark:text-white">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="font-mono text-xs uppercase tracking-[0.24em] text-mario-coin">choose your power-up</span>
             <h2 className="mt-3 font-display text-4xl font-extrabold md:text-6xl">Stack de trabalho</h2>
           </div>
-          <p className="max-w-xl text-white/60">
+          <p className="max-w-xl text-[#4f5b70] dark:text-white/75">
             Ferramentas que uso para construir interfaces web, apps mobile, integrações e experiências de produto.
           </p>
         </div>
