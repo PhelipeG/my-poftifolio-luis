@@ -38,6 +38,31 @@ export const technicalTestsData: TechnicalTest[] = [
     status: "Concluído"
   },
   {
+    id: 5,
+    title: "Gestão de Vagas e Candidatos - Peixe 30",
+    description: "Sistema completo de gerenciamento de vagas e candidatos desenvolvido como teste técnico para a Peixe 30. Plataforma com matching inteligente entre vagas e candidatos, interface intuitiva para recrutadores e candidatos, visualização de compatibilidade e fluxo completo de candidatura. Arquitetura limpa com Next.js App Router, tipagem estrita com TypeScript e componentes acessíveis via Shadcn UI — demonstrando capacidade de entregar produto pronto para produção.",
+    image: "/images-projects/gestao-vagas.png",
+    category: "Frontend",
+    position: "Desenvolvedor Front-end Pleno",
+    repositoryUrl: "https://github.com/PhelipeG/frontend-peixe30-sistemas-vagas",
+    backendRepositoryUrl: "https://github.com/PhelipeG/backend-peixe30-gestao-vagas",
+    liveUrl: "https://peixe30-sistemas-vagas.vercel.app",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Axios" , "Zod", "React Hook Form"],
+    status: "Concluído"
+  },
+  {
+    id: 4,
+    title: "Smarti Web Ecommerce",
+    description: "E-commerce completo desenvolvido como teste técnico para vaga de Front-end Pleno no Grupo Smarti - Tecnologia Inteligente. Arquitetura moderna com Nuxt v4 e Vue.js, gerenciamento de estado com Pinia, cache e sincronização de dados assíncronos com TanStack Query v5, estilização performática com Tailwind CSS v4 e tipagem estrita com TypeScript. Demonstra domínio do ecossistema Vue no nível sênior: composables reutilizáveis, SSR-ready com Nuxt, e padrões de código escaláveis.",
+    image: "/images-projects/smarti-ecommerce.png",
+    category: "Frontend",
+    position: "Desenvolvedor Front-end Pleno",
+    repositoryUrl: "https://github.com/PhelipeG/smarti-web-ecommerce",
+    liveUrl: "https://smarti-web-ecommerce.vercel.app",
+    technologies: ["Nuxt v4", "Vue.js", "Vite", "TypeScript", "Pinia", "Tailwind CSS v4", "TanStack Query v5", "Local Storage"],
+    status: "Concluído"
+  },
+  {
     id: 3,
     title: "App Fitness",
     description: "Aplicativo mobile para acompanhamento de atividades físicas, com funcionalidades de registro de treinos, monitoramento de progresso , integracao com chatbot(IA Gemini com prompt personalizado para sugestões de treinos e dicas de saúde).",
