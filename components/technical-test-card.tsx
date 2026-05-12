@@ -31,7 +31,7 @@ const TechnicalTestCard = ({ test }: TechnicalTestCardProps) => {
           alt={test.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className={`${test.imageFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-300 group-hover:scale-110`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         

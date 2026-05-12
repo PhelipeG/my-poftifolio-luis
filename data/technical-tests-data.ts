@@ -10,6 +10,7 @@ export interface TechnicalTest {
   liveUrl?: string;
   technologies: string[];
   status: "Concluído" | "Em andamento" | "Finalizado";
+  imageFit?: "cover" | "contain";
 }
 
 export const technicalTestsData: TechnicalTest[] = [
@@ -35,6 +36,31 @@ export const technicalTestsData: TechnicalTest[] = [
     repositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack",
     backendRepositoryUrl: "https://github.com/PhelipeG/teste-tecnico-fullstack/tree/master/backend",
     technologies: ["React.js", "React Router v7", "Context API", "Axios", "TypeScript", "React Hook Form", "Zod", "Vitest" , "Tailwind CSS" , "React Query"],
+    status: "Concluído"
+  },
+  {
+    id: 7,
+    title: "CDC Bank - App Bancário Mobile",
+    description: "Aplicativo mobile de gerenciamento bancário desenvolvido como teste técnico para o Banco CDC. Permite que parceiros gerenciem clientes e realizem transações de forma segura: autenticação com persistência de sessão, listagem e busca em tempo real de clientes por nome ou documento, cadastro PF/PJ, edição e exclusão, transferências entre contas com validação de saldo, histórico de transações e geração de comprovante PDF. Navegação com Stack + Bottom Tabs, loading states, empty states e tema customizável — entrega completa de produto mobile production-ready.",
+    image: "/images-projects/cdc-mobile.png",
+    category: "Mobile",
+    position: "Desenvolvedor Mobile",
+    repositoryUrl: "https://github.com/PhelipeG/Cdc-Bank-ReactNative",
+    technologies: ["React Native", "TypeScript", "Expo", "AsyncStorage", "React Navigation", "React Hook Form", "Zod", "Axios"],
+    status: "Concluído",
+    imageFit: "contain"
+  },
+  {
+    id: 6,
+    title: "Lead Management System - Logik",
+    description: "Solução completa para captação e gestão de leads empresariais, desenvolvida como teste técnico para vaga de Desenvolvedor Full Stack. Interface moderna com fluxo completo de criação, edição e acompanhamento de leads, validação robusta com Zod e integração com API RESTful via Axios. Demonstra domínio de Next.js App Router, tipagem estrita e boas práticas de arquitetura frontend prontas para produção.",
+    image: "/images-projects/logik-gestao-leads.png",
+    category: "Frontend",
+    position: "Desenvolvedor Full Stack",
+    repositoryUrl: "https://github.com/PhelipeG/logik-manager-lead-web",
+    backendRepositoryUrl: "https://github.com/PhelipeG/logik-manager-lead-backend",
+    liveUrl: "https://logik-manager-lead-web.vercel.app",
+    technologies: ["Next.js", "React", "TypeScript", "Axios", "Zod"],
     status: "Concluído"
   },
   {
