@@ -17,7 +17,7 @@ export const technicalTestsData: TechnicalTest[] = [
   {
     id: 1,
     title: "App de E-commerce com Flutter",
-    description: "Aplicativo Flutter para e-commerce, consumindo produtos de dois fornecedores via API, com busca, filtros avançados,carrinho persistente e finalização de compra com banco de dados de uma api",
+    description: "Aplicativo Flutter para e-commerce consumindo múltiplos fornecedores via API, com busca e filtros avançados, carrinho persistente com Shared Preferences e checkout integrado ao backend Node.js — entregue como teste técnico completo.",
     image: "/images-projects/flutterEcommerce.png",
     category: "Mobile",
     position: "Desenvolvedor Fullstack Junior",
@@ -29,7 +29,7 @@ export const technicalTestsData: TechnicalTest[] = [
   {
     id: 2,
     title: "App Web de Ecommerce com ReactJs",
-    description: "Aplicação web de e-commerce desenvolvida com React.js, utilizando Context API para gerenciamento de estado , React Router para navegação, e integração com uma API RESTful para gerenciamento de produtos e carrinho de compras.",
+    description: "E-commerce web completo desenvolvido em React.js com Context API para estado global, roteamento dinâmico com React Router v7 e cobertura de testes com Vitest. Integração RESTful com validação via Zod e React Hook Form — entregue como teste técnico de alto nível.",
     image: "/images-projects/webEcommerce.png",
     category: "Frontend",
     position: "Desenvolvedor Fullstack Junior",
@@ -91,7 +91,7 @@ export const technicalTestsData: TechnicalTest[] = [
   {
     id: 3,
     title: "App Fitness",
-    description: "Aplicativo mobile para acompanhamento de atividades físicas, com funcionalidades de registro de treinos, monitoramento de progresso , integracao com chatbot(IA Gemini com prompt personalizado para sugestões de treinos e dicas de saúde).",
+    description: "Aplicativo mobile fitness com registro de treinos, monitoramento de progresso e chatbot de IA integrado (Google Gemini) com prompts personalizados para sugestões de exercícios — demonstrando integração de LLMs em aplicativos móveis production-ready.",
     image: "/images-projects/fitnessApp.png",
     category: "Mobile",
     position: "Desenvolvedor Mobile Fullstack",

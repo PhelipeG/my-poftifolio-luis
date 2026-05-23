@@ -19,7 +19,7 @@ export const projectsData = [
   {
     id: 1,
     title: "HealtCare",
-    description: "Plataforma de saúde para registro de pacientes e consultas.",
+    description: "Plataforma de saúde fullstack com cadastro de pacientes, agendamento de consultas e notificações SMS via Twilio. Autenticação segura com Appwrite, formulários validados com React Hook Form e monitoramento de erros em produção com Sentry.",
     image: healtcareImage,
     link: "https://github.com/PhelipeG/Plataforma-HealtCare",
     category: "Web",
@@ -38,7 +38,7 @@ export const projectsData = [
   {
     id: 2,
     title: "Planner Io",
-    description: "App para planejar viagens e convidar amigos.",
+    description: "Aplicação web colaborativa para planejamento de viagens com convite de participantes em tempo real. Interface fluida e responsiva desenvolvida com React + TypeScript consumindo API REST via Axios.",
     image: plannerIoImage,
     link: "https://github.com/GuilhaoF/planner.io",
     category: "Web",
@@ -54,7 +54,7 @@ export const projectsData = [
   {
     id: 3,
     title: "Gdelivery",
-    description: "App de delivery com pedidos via WhatsApp.",
+    description: "Aplicativo mobile de delivery com integração ao WhatsApp para envio de pedidos direto ao estabelecimento. Gerenciamento de estado global com Zustand e persistência local com Async Storage.",
     image: gdeliveryImage,
     link: "",
     category: "Mobile",
@@ -71,7 +71,7 @@ export const projectsData = [
   {
     id: 4,
     title: "MyContacts",
-    description: "Gerenciador de contatos.",
+    description: "Aplicação web CRUD completa para gerenciamento de contatos com interface moderna e responsiva. Desenvolvida com React + Styled Components, demonstrando domínio de operações assíncronas, estado e ciclo de vida de componentes.",
     image: mycontactsImage,
     link: "https://github.com/PhelipeG/mycontacts-frontend",
     category: "Web",
@@ -85,7 +85,7 @@ export const projectsData = [
   {
     id: 5,
     title: "Web Carros",
-    description: "Sistema de gerenciamento de carros.",
+    description: "Plataforma web de anúncios e gerenciamento de veículos com autenticação Firebase, upload de imagens e formulários com validação robusta via React Hook Form + Zod.",
     image: webcarrosImage,
     link: "https://github.com/PhelipeG/web-rtx-cars",
     category: "Web",
@@ -102,7 +102,7 @@ export const projectsData = [
   {
     id: 6,
     title: "Pass In",
-    description: "App para gerenciamento de inscrições em eventos.",
+    description: "Aplicativo mobile para inscrição e check-in em eventos com leitura de QR code. Animações nativas fluidas com Moti, navegação tipada com Expo Router e gerenciamento de estado com Zustand.",
     image: passInImage,
     link: "https://github.com/GuilhaoF/pass-in-app",
     category: "Mobile",
@@ -120,7 +120,7 @@ export const projectsData = [
   {
     id: 7,
     title: "My Goals",
-    description: "App para gerenciamento de metas financeiras.",
+    description: "Aplicativo mobile para criação e acompanhamento de metas financeiras com armazenamento local via SQLite. Animações de alta performance com Reanimated 3 para uma experiência de usuário premium.",
     image: mygoalsImage,
     link: "",
     category: "Mobile",
@@ -138,7 +138,7 @@ export const projectsData = [
   {
     id: 8,
     title: "Iweather",
-    description: "App de previsão do tempo usando API do OpenWeather.",
+    description: "Aplicativo mobile de previsão do tempo com integração à API OpenWeather, atualizações OTA via Expo Updates e cobertura de testes com Jest — focado em confiabilidade e qualidade de código.",
     image: iweatherImage,
     link: "",
     category: "Mobile",
@@ -157,7 +157,7 @@ export const projectsData = [
   {
     id: 9,
     title: "Pizza Shop",
-    description: "App web para pedidos de pizza.",
+    description: "Dashboard web para gestão de pedidos de pizzaria com cache e sincronização de dados via React Query, testes E2E com Playwright e testes unitários com Jest. Arquitetura de código de nível profissional.",
     image: pizzaShopImage,
     link: "https://github.com/PhelipeG/Pizza-Shop-Web?tab=readme-ov-file",
     category: "Web",
@@ -178,8 +178,7 @@ export const projectsData = [
   {
     id: 10,
     title: "SafeStock",
-    description:
-      "Projeto de sistema de estoque com autenticação e gerenciamento de produtos usando Socket.IO, Notificações de estoque baixo e muito mais.",
+    description: "Sistema de controle de estoque em tempo real com alertas de baixo estoque via Socket.IO e autenticação segura. Desenvolvido em Vue.js com Pinia — demonstrando versatilidade além do ecossistema React.",
     image: safeStockImage,
     link: "https://github.com/PhelipeG/safestock-vuejs-app",
     category: "Web",
@@ -198,8 +197,7 @@ export const projectsData = [
   {
     id: 11,
     title: "Coffee Delivery Web",
-    description:
-      "O projeto é um ecommerce on-line de cafés com a opção de delivery, onde o usuário adiciona ao carrinho de compras um ou mais dos produtos disponíveis e solicita a compra preenchendo o formulário com o endereço de entrega",
+    description: "E-commerce de cafés com carrinho persistente, cálculo de frete por endereço e checkout completo com formulário validado. Estado global com Zustand e estilização com Styled Components.",
     image: coffeDeliveryWebImage,
     link: "https://github.com/PhelipeG/coffee-app-web",
     category: "Web",
@@ -218,8 +216,7 @@ export const projectsData = [
   {
     id: 12,
     title: "Cook Mobile App",
-    description:
-      "O projeto é um aplicativo mobile de receitas, uma aplicação que sugere receitas conforme os ingredientes selecionados usando React Native.",
+    description: "Aplicativo mobile de receitas que sugere pratos com base nos ingredientes selecionados pelo usuário. Backend integrado com Supabase e animações fluidas via React Native Reanimated.",
     image: cookAppImage,
     link: "https://github.com/PhelipeG/cookapp-reactnative",
     category: "Mobile",
@@ -237,7 +234,7 @@ export const projectsData = [
   {
     id: 13,
     title: "Teams App",
-    description: "Um app para reunir e separar pessoas em equipes para jogos e colocar a pontuacao para cada equipe e em breve mais funcionalidades",
+    description: "Aplicativo mobile para criação e gerenciamento de times em jogos com placar em tempo real. Persistência de dados com Async Storage e interface estilizada com Styled Components.",
     image: teamsMobileImage,
     link: "https://github.com/PhelipeG/teams-app-reactnative",
     category: "Mobile",
@@ -253,7 +250,7 @@ export const projectsData = [
   {
     id: 14,
     title: "Landing Page - Products Soda",
-    description: "Landing page para a promoção de produtos de soda.",
+    description: "Landing page de alta conversão com animações sofisticadas via Framer Motion e design totalmente responsivo. Disponível em produção na Vercel.",
     image: sodaProductsImage,
     link: "https://landing-page-product-sodas.vercel.app",
     category: "Web",
@@ -268,7 +265,7 @@ export const projectsData = [
   {
     id: 15,
     title: "Alimeta - MicroSaas de Nutrição",
-    description: "Alimeta é um microSaaS de nutrição que permite aos usuários registrar suas refeições, acompanhar a ingestão de nutrientes e receber recomendações personalizadas.",
+    description: "MicroSaaS de nutrição em produção com registro de refeições, rastreamento de macronutrientes e recomendações personalizadas. Monetização via Stripe, banco PostgreSQL com Prisma, autenticação segura e monitoramento com Sentry — produto real com usuários reais.",
     image: alimetaSaasImage,
     link: "https://alimeta-saas.vercel.app",
     category: "Web",
@@ -290,7 +287,7 @@ export const projectsData = [
   {
     id: 16,
     title: "Fleet - App de Gerenciamento de Frotas",
-    description: "Um aplicativo para gerenciar frotas de veículos, permitindo rastreamento, manutenção e relatórios.",
+    description: "Aplicativo mobile para gestão de frotas com rastreamento de veículos em tempo real via GPS (Expo Location), armazenamento offline com Realm e monitoramento de conectividade via NetInfo — arquitetura robusta para uso em campo.",
     image: fleetImage,
     link: "https://github.com/PhelipeG/fleet-app",
     category: "Mobile",
