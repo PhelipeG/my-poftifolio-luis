@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import { experience } from "@/data/experience-data";
 
@@ -40,9 +39,20 @@ export default function Timeline() {
                 0{index + 1}
               </span>
             </div>
-            <p className="mt-5 max-w-3xl text-sm leading-7 text-[#4f5b70] md:text-base dark:text-white/70">
-              {item.description}
-            </p>
+            {Array.isArray(item.description) ? (
+              <ul className="mt-5 max-w-3xl flex flex-col gap-2">
+                {item.description.map((line, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm leading-7 text-[#4f5b70] md:text-base dark:text-white/70">
+                    <span className="mt-2.5 min-w-[6px] h-[6px] rounded-full bg-accent shrink-0" />
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-[#4f5b70] md:text-base dark:text-white/70">
+                {item.description}
+              </p>
+            )}
           </motion.div>
         ))}
       </div>

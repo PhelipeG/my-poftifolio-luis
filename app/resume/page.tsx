@@ -116,8 +116,8 @@ export default function Resume() {
           <motion.button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/pdf/LuisCV.pdf";
-              link.download = "Luis_Felipe_Guilhao_CV.pdf";
+              link.href = "/pdf/LuisFelipeGSilva.pdf";
+              link.download = "LuisFelipeGuilhaoCV.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
