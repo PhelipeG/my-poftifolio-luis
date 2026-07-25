@@ -15,6 +15,9 @@
   body {
     @apply bg-background font-primary text-foreground antialiased;
     min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 82% 8%, rgba(212, 249, 78, 0.055), transparent 28rem),
+      radial-gradient(circle at 8% 48%, rgba(243, 242, 237, 0.025), transparent 24rem);
   }
 
   /* Grain sutil por cima de tudo, dá textura sem pesar */
@@ -36,6 +39,7 @@
 
   .section-label {
     @apply font-mono text-[11px] uppercase tracking-[0.3em] text-accent;
+    text-shadow: 0 0 18px rgba(212, 249, 78, 0.55);
   }
 
   .hairline {
@@ -45,10 +49,123 @@
   /* Título de seção padrão */
   .section-title {
     @apply mt-4 font-display text-4xl font-bold leading-[1.02] tracking-tight text-foreground md:text-6xl;
+    text-shadow: 0 0 36px rgba(243, 242, 237, 0.09);
   }
 
   .glow-accent {
-    box-shadow: 0 0 80px -20px rgba(212, 249, 78, 0.25);
+    box-shadow:
+      0 0 110px -22px rgba(212, 249, 78, 0.38),
+      0 0 32px -16px rgba(212, 249, 78, 0.45);
+  }
+
+  .text-glow {
+    text-shadow:
+      0 0 20px rgba(243, 242, 237, 0.18),
+      0 0 52px rgba(212, 249, 78, 0.12);
+  }
+
+  .text-gradient-shine {
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      #777a70 0%,
+      #f3f2ed 34%,
+      #d4f94e 50%,
+      #f3f2ed 66%,
+      #777a70 100%
+    );
+    background-size: 220% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 24px rgba(212, 249, 78, 0.18));
+  }
+
+  .ambient-orb {
+    border-radius: 9999px;
+    background: rgba(212, 249, 78, 0.12);
+    filter: blur(100px);
+    animation: ambient-pulse 7s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .surface-glow {
+    position: relative;
+    isolation: isolate;
+    transition:
+      border-color 500ms ease,
+      box-shadow 500ms ease,
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .surface-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      460px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(212, 249, 78, 0.14),
+      transparent 48%
+    );
+    transition: opacity 450ms ease;
+  }
+
+  .surface-glow > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .surface-glow:hover {
+    border-color: rgba(212, 249, 78, 0.38);
+    box-shadow:
+      0 24px 80px -40px rgba(212, 249, 78, 0.42),
+      inset 0 1px 0 rgba(212, 249, 78, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .surface-glow:hover::before {
+    opacity: 1;
+  }
+
+  .button-shine {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 32px -12px rgba(212, 249, 78, 0.68);
+  }
+
+  .button-shine::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    pointer-events: none;
+    background: linear-gradient(
+      110deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.58) 45%,
+      transparent 70%
+    );
+    transform: translateX(-130%);
+    animation: button-sweep 4.5s ease-in-out infinite;
+  }
+
+  .luminous-rule {
+    position: relative;
+  }
+
+  .luminous-rule::after {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 249, 78, 0.55), transparent);
+    box-shadow: 0 0 16px rgba(212, 249, 78, 0.35);
   }
 
   .mask-fade-x {
@@ -73,5 +190,55 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+}
+
+@keyframes text-shine {
+  0%,
+  18% {
+    background-position: 100% center;
+  }
+  62%,
+  100% {
+    background-position: -100% center;
+  }
+}
+
+@keyframes ambient-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes button-sweep {
+  0%,
+  55% {
+    transform: translateX(-130%);
+  }
+  78%,
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient-shine,
+  .ambient-orb,
+  .button-shine::after {
+    animation: none;
+  }
+
+  .text-gradient-shine {
+    background-position: 50% center;
+  }
+
+  .surface-glow {
+    transition-duration: 0.01ms;
   }
 }

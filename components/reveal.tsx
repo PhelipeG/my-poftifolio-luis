@@ -24,8 +24,13 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: reduce ? 0 : y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{
+        opacity: 0,
+        y: reduce ? 0 : y,
+        scale: reduce ? 1 : 0.985,
+        filter: reduce ? "none" : "blur(10px)",
+      }}
+      whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
       viewport={{ once, margin: "-80px" }}
       transition={{ duration: 0.8, delay, ease: EASE }}
     >
@@ -62,7 +67,9 @@ export function SectionHeading({
   return (
     <Reveal className={className}>
       <span className="section-label">{label}</span>
-      <h2 className="section-title max-w-3xl text-balance">{title}</h2>
+      <h2 className="section-title text-glow max-w-3xl text-balance">
+        {title}
+      </h2>
     </Reveal>
   )
 }

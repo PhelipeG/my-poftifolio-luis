@@ -32,16 +32,20 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [inView, count, value])
 
   return (
-    <span ref={ref} className="font-display text-5xl font-bold text-foreground md:text-6xl">
+    <span ref={ref} className="text-glow font-display text-5xl font-bold text-foreground md:text-6xl">
       <motion.span>{rounded}</motion.span>
-      <span className="text-accent">{suffix}</span>
+      <span className="text-accent drop-shadow-[0_0_14px_rgba(212,249,78,0.55)]">{suffix}</span>
     </span>
   )
 }
 
 export function About() {
   return (
-    <section id="sobre" className="mx-auto max-w-[1400px] px-6 py-28 lg:px-10 lg:py-36">
+    <section id="sobre" className="relative mx-auto max-w-[1400px] px-6 py-28 lg:px-10 lg:py-36">
+      <div
+        aria-hidden="true"
+        className="ambient-orb pointer-events-none absolute -left-56 top-1/3 h-72 w-72 opacity-30 [animation-delay:-4s]"
+      />
       <SectionHeading label="01 — Sobre" title="Código limpo, produto de verdade." />
 
       <div className="mt-14 grid gap-14 lg:grid-cols-[1.1fr_0.9fr]">
@@ -77,7 +81,7 @@ export function About() {
               {education.items.map((edu) => (
                 <li
                   key={edu.course}
-                  className="group border-t border-line py-5 transition-colors duration-300 last:border-b hover:bg-surface/60"
+                  className="group border-t border-line py-5 transition-all duration-300 last:border-b hover:border-accent/30 hover:bg-surface/60 hover:pl-3"
                 >
                   <span className="font-mono text-xs text-accent">{edu.duration}</span>
                   <p className="mt-1.5 font-semibold text-foreground">{edu.course}</p>
@@ -95,7 +99,7 @@ export function About() {
               {about.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-line px-3.5 py-1.5 text-xs text-muted transition-colors duration-300 hover:border-accent/60 hover:text-foreground"
+                  className="rounded-full border border-line px-3.5 py-1.5 text-xs text-muted transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/60 hover:text-accent hover:shadow-[0_0_20px_-8px_rgba(212,249,78,0.65)]"
                 >
                   {skill}
                 </span>

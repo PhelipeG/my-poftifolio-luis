@@ -9,7 +9,11 @@ const EASE = [0.22, 1, 0.36, 1] as const
 
 export function Contact() {
   return (
-    <section id="contato" className="border-t border-line bg-surface/40">
+    <section id="contato" className="luminous-rule relative overflow-hidden border-t border-line bg-surface/40">
+      <div
+        aria-hidden="true"
+        className="ambient-orb pointer-events-none absolute -right-32 top-24 h-[420px] w-[420px] opacity-40"
+      />
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-10 lg:py-40">
         <Reveal>
           <span className="section-label">06 — Contato</span>
@@ -17,13 +21,13 @@ export function Contact() {
 
         <motion.a
           href="mailto:luisphelipe1000@gmail.com"
-          initial={{ opacity: 0, y: 48 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 48, filter: "blur(12px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, delay: 0.1, ease: EASE }}
           className="group mt-8 block"
         >
-          <span className="font-display text-[clamp(2.5rem,8vw,6.5rem)] font-bold leading-[1.02] tracking-tight text-foreground transition-colors duration-500 group-hover:text-accent">
+          <span className="text-gradient-shine font-display text-[clamp(2.5rem,8vw,6.5rem)] font-bold leading-[1.02] tracking-tight transition-all duration-500 group-hover:drop-shadow-[0_0_28px_rgba(212,249,78,0.3)]">
             Vamos construir algo
             <br />
             juntos?
@@ -35,7 +39,7 @@ export function Contact() {
         </motion.a>
 
         <Reveal delay={0.25}>
-          <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-line pt-10">
+          <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-accent/15 pt-10 shadow-[0_-18px_60px_-45px_rgba(212,249,78,0.7)]">
             <span className="inline-flex items-center gap-2 text-sm text-muted">
               <Phone size={15} className="text-accent" />
               (99) 99216-9563
@@ -50,7 +54,7 @@ export function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:border-accent hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-8px_rgba(212,249,78,0.8)]"
               >
                 <FaGithub size={17} />
               </a>
@@ -59,7 +63,7 @@ export function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:border-accent hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-8px_rgba(212,249,78,0.8)]"
               >
                 <FaLinkedinIn size={17} />
               </a>

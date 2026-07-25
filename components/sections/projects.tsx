@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react"
 import { motion } from "framer-motion"
 import { ArrowLeft, ArrowRight, ArrowUpRight, Lock } from "lucide-react"
 import { Reveal, SectionHeading } from "@/components/reveal"
+import { SpotlightCard } from "@/components/spotlight-card"
 import { projectsData } from "@/data/projects-data"
 
 const filters = ["Todos", "Web", "Mobile"] as const
@@ -116,15 +117,16 @@ export function Projects() {
                 key={project.id}
                 className="mr-6 min-w-0 flex-[0_0_88%] md:flex-[0_0_72%] lg:mr-10 lg:flex-[0_0_62%]"
               >
-                <motion.div
-                  animate={{
-                    opacity: index === selectedIndex ? 1 : 0.35,
-                    scale: index === selectedIndex ? 1 : 0.97,
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="grid h-full overflow-hidden rounded-2xl border border-line bg-surface lg:grid-cols-[1.05fr_0.95fr]"
-                >
-                  <div className="group relative aspect-[16/11] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
+                <SpotlightCard className="h-full overflow-hidden rounded-2xl border border-line">
+                  <motion.div
+                    animate={{
+                      opacity: index === selectedIndex ? 1 : 0.35,
+                      scale: index === selectedIndex ? 1 : 0.97,
+                    }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="grid h-full bg-surface lg:grid-cols-[1.05fr_0.95fr]"
+                  >
+                    <div className="group relative aspect-[16/11] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
                     <Image
                       src={project.image}
                       alt={`Screenshot do projeto ${project.title}`}
@@ -133,19 +135,19 @@ export function Projects() {
                       className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface/40 to-transparent lg:bg-gradient-to-r" />
-                  </div>
+                    </div>
 
-                  <div className="flex flex-col p-7 lg:p-10">
+                    <div className="flex flex-col p-7 lg:p-10">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
                         {project.category}
                       </span>
-                      <span className="font-display text-4xl font-bold text-foreground/10">
+                      <span className="text-glow font-display text-4xl font-bold text-accent/25">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
 
-                    <h3 className="mt-4 font-display text-2xl font-bold text-foreground lg:text-3xl">
+                    <h3 className="text-glow mt-4 font-display text-2xl font-bold text-foreground lg:text-3xl">
                       {project.title}
                     </h3>
                     <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -184,8 +186,9 @@ export function Projects() {
                         </span>
                       )}
                     </div>
-                  </div>
-                </motion.div>
+                    </div>
+                  </motion.div>
+                </SpotlightCard>
               </article>
             ))}
           </div>

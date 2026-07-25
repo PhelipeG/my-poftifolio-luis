@@ -59,9 +59,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={`${bricolage.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
+        suppressHydrationWarning
       >
         <SmoothScroll>
           <SpeedInsights />

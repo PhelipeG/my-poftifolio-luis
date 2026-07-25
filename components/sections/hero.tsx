@@ -28,7 +28,11 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-20 h-[480px] w-[480px] rounded-full bg-accent/[0.06] blur-[120px]"
+        className="ambient-orb pointer-events-none absolute -right-32 top-16 h-[520px] w-[520px]"
+      />
+      <div
+        aria-hidden="true"
+        className="ambient-orb pointer-events-none absolute -left-52 top-1/3 h-[360px] w-[360px] opacity-30 [animation-delay:-3s]"
       />
 
       <motion.div
@@ -50,11 +54,11 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-8 font-display text-[clamp(3rem,9vw,7.5rem)] font-bold leading-[0.95] tracking-tight text-foreground"
+            className="text-glow mt-8 font-display text-[clamp(3rem,9vw,7.5rem)] font-bold leading-[0.95] tracking-tight text-foreground"
           >
             Luis Felipe
             <br />
-            <span className="text-muted">Guilhão</span>
+            <span className="text-gradient-shine">Guilhão</span>
           </motion.h1>
 
           <motion.p
@@ -73,7 +77,7 @@ export function Hero() {
           >
             <a
               href="#projetos"
-              className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-background transition-transform duration-300 hover:scale-[1.03]"
+              className="button-shine group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-background transition-transform duration-300 hover:scale-[1.04]"
             >
               Ver projetos
               <ArrowUpRight
@@ -84,7 +88,7 @@ export function Hero() {
             <a
               href="/pdf/LuisFelipeGSilva.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground transition-colors duration-300 hover:border-accent hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_28px_-10px_rgba(212,249,78,0.7)]"
             >
               Baixar CV
             </a>
@@ -94,7 +98,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:border-accent hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-8px_rgba(212,249,78,0.8)]"
               >
                 <FaGithub size={17} />
               </a>
@@ -103,7 +107,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:border-accent hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-8px_rgba(212,249,78,0.8)]"
               >
                 <FaLinkedinIn size={17} />
               </a>
@@ -115,7 +119,7 @@ export function Hero() {
           variants={item}
           className="relative mx-auto w-full max-w-[380px] lg:max-w-none"
         >
-          <div className="glow-accent group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black">
+          <div className="glow-accent group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black transition-all duration-700 hover:border-accent/50">
             <Image
               src="/images/hero-portrait.png"
               alt="Foto de Luis Felipe Guilhão"

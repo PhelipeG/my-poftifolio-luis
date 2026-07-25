@@ -53,7 +53,7 @@ export function SiteNav() {
   return (
     <>
       <motion.div
-        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-accent"
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-accent shadow-[0_0_16px_rgba(212,249,78,0.9)]"
         style={{ scaleX: progress }}
       />
 
@@ -67,7 +67,7 @@ export function SiteNav() {
         <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 lg:px-10">
           <a
             href="#inicio"
-            className="font-display text-lg font-bold tracking-tight text-foreground"
+            className="text-glow font-display text-lg font-bold tracking-tight text-foreground"
           >
             Luis Felipe
             <span className="text-accent">.</span>
@@ -91,7 +91,7 @@ export function SiteNav() {
 
           <a
             href="mailto:luisphelipe1000@gmail.com"
-            className="hidden rounded-full border border-line px-5 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-all duration-300 hover:border-accent hover:text-accent lg:block"
+            className="hidden rounded-full border border-line px-5 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_24px_-8px_rgba(212,249,78,0.75)] lg:block"
           >
             Vamos conversar
           </a>

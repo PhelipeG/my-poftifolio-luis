@@ -5,6 +5,7 @@ import Image from "next/image"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight, ExternalLink, Github, Server } from "lucide-react"
 import { Reveal, SectionHeading } from "@/components/reveal"
+import { SpotlightCard } from "@/components/spotlight-card"
 import { technicalTestsData } from "@/data/technical-tests-data"
 
 export function TechnicalTests() {
@@ -76,11 +77,12 @@ export function TechnicalTests() {
         <div ref={emblaRef} className="mt-14">
           <div className="flex touch-pan-y pl-6 lg:pl-[max(2.5rem,calc((100vw-1400px)/2+2.5rem))]">
             {technicalTestsData.map((test) => (
-              <article
+              <SpotlightCard
                 key={test.id}
-                className="mr-6 flex min-w-0 flex-[0_0_86%] flex-col overflow-hidden rounded-2xl border border-line bg-background transition-colors duration-300 hover:border-accent/40 md:flex-[0_0_46%] lg:flex-[0_0_31%]"
+                className="mr-6 min-w-0 flex-[0_0_86%] overflow-hidden rounded-2xl border border-line bg-background md:flex-[0_0_46%] lg:flex-[0_0_31%]"
               >
-                <div className="group relative aspect-video overflow-hidden bg-elevated">
+                <article className="flex h-full flex-col">
+                  <div className="group relative aspect-video overflow-hidden bg-elevated">
                   <Image
                     src={test.image}
                     alt={`Screenshot do teste técnico ${test.title}`}
@@ -92,9 +94,9 @@ export function TechnicalTests() {
                         : "object-cover object-top"
                     }`}
                   />
-                </div>
+                  </div>
 
-                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
                       {test.category}
@@ -105,7 +107,7 @@ export function TechnicalTests() {
                     </span>
                   </div>
 
-                  <h3 className="mt-3 font-display text-lg font-bold leading-snug text-foreground">
+                  <h3 className="text-glow mt-3 font-display text-lg font-bold leading-snug text-foreground">
                     {test.title}
                   </h3>
                   <p className="mt-1 text-xs text-muted">{test.position}</p>
@@ -164,8 +166,9 @@ export function TechnicalTests() {
                       </a>
                     )}
                   </div>
-                </div>
-              </article>
+                  </div>
+                </article>
+              </SpotlightCard>
             ))}
           </div>
         </div>
