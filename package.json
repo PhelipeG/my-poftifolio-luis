@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint app components data lib"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",
@@ -22,9 +22,10 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
-    "eslint": "^8.57.1",
+    "embla-carousel-react": "^8.6.0",
     "eslint-config-next": "^16.2.6",
     "framer-motion": "^11.5.4",
+    "lenis": "^1.3.25",
     "lucide-react": "^0.453.0",
     "next": "^16.2.6",
     "react": "18.3.1",
@@ -40,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
     "autoprefixer": "^10.4.14",
+    "eslint": "^9.39.5",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",

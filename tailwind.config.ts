@@ -1,7 +1,6 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,9 +9,9 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "15px",
+      padding: "1.5rem",
       screens: {
-        "2xl": "1600px",
+        "2xl": "1400px",
       },
     },
     screens: {
@@ -20,7 +19,7 @@ const config: Config = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1600px",
+      "2xl": "1536px",
     },
     fontFamily: {
       primary: "var(--font-sans)",
@@ -28,64 +27,51 @@ const config: Config = {
       mono: "var(--font-jetbrains-mono)",
     },
     extend: {
+      colors: {
+        background: "#0B0B0C",
+        surface: "#131316",
+        elevated: "#1A1A1E",
+        foreground: "#F3F2ED",
+        muted: "#8E8E88",
+        subtle: "#5C5C58",
+        accent: {
+          DEFAULT: "#D4F94E",
+          dim: "#A8C93C",
+        },
+        line: "rgba(243, 242, 237, 0.09)",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
       keyframes: {
         "accordion-down": {
-          from: { height: "0"},
-          to: { height: "var(--radix-accordion-content-height)"},
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          to: { height: "var(--radix-accordion-content-height)"},
-          from: { height: "0"},
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
-        "spin-slow": {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
         "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        }
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "spin-slow": "spin-slow 20s linear infinite",
+        marquee: "marquee 40s linear infinite",
         "fade-in": "fade-in 0.5s ease-out forwards",
-      },
-      colors: {
-        primary: '#5c94fc',
-        accent: {
-          DEFAULT: '#e52521',
-          hover: '#ff3b30',
-        },
-        mario: {
-          sky: '#5c94fc',
-          cloud: '#f8f8f8',
-          brick: '#b85a24',
-          brickDark: '#7c3418',
-          question: '#fbd000',
-          coin: '#f7d51d',
-          red: '#e52521',
-          blue: '#049cd8',
-          green: '#43b047',
-          pipe: '#2fa346',
-          ground: '#8b4513',
-          panel: '#2b1b14',
-          shell: '#f8f8f8',
-          violet: '#3d2f8f',
-          yellow: '#fbd000',
-        },
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
 
-export default config;
+export default config
